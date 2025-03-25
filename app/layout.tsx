@@ -11,7 +11,6 @@ export const metadata = {
   title: "PurpleByte - Custom Technology Solutions",
   description:
     "We help small and medium businesses grow and operate more efficiently through custom technology solutions.",
-  generator: "v0.dev",
   icons: {
     icon: "/images/logo.svg",
     shortcut: "/images/logo.svg",
