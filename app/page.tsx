@@ -18,8 +18,8 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative h-screen flex flex-col items-center justify-center text-white overflow-hidden">
         <Image
-          src="/images/hero-bg.jpg"
-          alt="Purple sunset clouds"
+          src="/images/hero-bg-snow.jpg"
+          alt="Snow covered mountains"
           fill
           className="object-cover z-0"
           priority
