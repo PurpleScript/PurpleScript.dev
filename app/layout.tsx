@@ -24,7 +24,7 @@ export const metadata = {
     siteName: "PurpleScript",
     images: [
       {
-        url: "/images/social-preview.png",
+        url: "/images/social-preview.jpg",
         width: 1200,
         height: 630,
         alt: "PurpleScript - Custom Technology Solutions",
@@ -38,7 +38,7 @@ export const metadata = {
     title: "PurpleScript - Custom Technology Solutions",
     description:
       "We help small and medium businesses grow and operate more efficiently through custom technology solutions.",
-    images: ["/images/social-preview.png"],
+    images: ["/images/social-preview.jpg"],
   },
   other: {
     "og:image:width": "1200",
