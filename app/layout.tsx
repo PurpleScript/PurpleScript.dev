@@ -8,7 +8,7 @@ import Footer from "@/components/footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "PurpleByte - Custom Technology Solutions",
+  title: "PurpleScript - Custom Technology Solutions",
   description:
     "We help small and medium businesses grow and operate more efficiently through custom technology solutions.",
   icons: {
@@ -17,17 +17,17 @@ export const metadata = {
     apple: "/images/logo.svg",
   },
   openGraph: {
-    title: "PurpleByte - Custom Technology Solutions",
+    title: "PurpleScript - Custom Technology Solutions",
     description:
       "We help small and medium businesses grow and operate more efficiently through custom technology solutions.",
     url: "https://purple-byte.vercel.app/",
-    siteName: "PurpleByte",
+    siteName: "PurpleScript",
     images: [
       {
         url: "/images/social-preview.png",
         width: 1200,
         height: 630,
-        alt: "PurpleByte - Custom Technology Solutions",
+        alt: "PurpleScript - Custom Technology Solutions",
       },
     ],
     locale: "en_US",
@@ -35,7 +35,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "PurpleByte - Custom Technology Solutions",
+    title: "PurpleScript - Custom Technology Solutions",
     description:
       "We help small and medium businesses grow and operate more efficiently through custom technology solutions.",
     images: ["/images/social-preview.png"],

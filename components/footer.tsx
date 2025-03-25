@@ -1,7 +1,7 @@
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react"
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -9,8 +9,10 @@ export default function Footer() {
       <div className="container px-4 md:px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           <div>
-            <h3 className="text-lg font-semibold mb-4">PurpleByte</h3>
-            <p className="text-white/70 mb-4">Custom technology solutions for small and medium businesses.</p>
+            <h3 className="text-lg font-semibold mb-4">PurpleScript</h3>
+            <p className="text-white/70 mb-4">
+              Custom technology solutions for small and medium businesses.
+            </p>
             <div className="flex space-x-4">
               <Link href="#" className="text-white/70 hover:text-white">
                 <Facebook className="h-5 w-5" />
@@ -92,22 +94,25 @@ export default function Footer() {
           </div>
           <div>
             <h3 className="text-lg font-semibold mb-4">Subscribe</h3>
-            <p className="text-white/70 mb-4">Stay updated with our latest news and offers.</p>
+            <p className="text-white/70 mb-4">
+              Stay updated with our latest news and offers.
+            </p>
             <form className="space-y-2">
               <Input
                 type="email"
                 placeholder="Your email"
                 className="bg-purple-800 border-purple-700 text-white placeholder:text-white/50"
               />
-              <Button className="w-full bg-white text-purple-700 hover:bg-purple-100">Subscribe</Button>
+              <Button className="w-full bg-white text-purple-700 hover:bg-purple-100">
+                Subscribe
+              </Button>
             </form>
           </div>
         </div>
         <div className="border-t border-white/10 pt-8 text-center text-white/70">
-          <p>© {new Date().getFullYear()} PurpleByte. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} PurpleScript. All rights reserved.</p>
         </div>
       </div>
     </footer>
-  )
+  );
 }
-

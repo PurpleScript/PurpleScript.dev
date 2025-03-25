@@ -12,13 +12,13 @@ export default function Header() {
           <div className="relative h-10 w-10">
             <Image
               src="/images/logo.svg"
-              alt="PurpleByte Logo"
+              alt="PurpleScript Logo"
               width={40}
               height={40}
               className="object-contain"
             />
           </div>
-          <span className="text-xl font-bold">PurpleByte</span>
+          <span className="text-xl font-bold">PurpleScript</span>
         </Link>
         <nav className="hidden md:flex gap-6">
           <Link
