@@ -3,6 +3,8 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Badge } from "@/components/ui/badge";
+import WhatsAppButton from "./components/WhatsAppButton";
+import EmailButton from "./components/EmailButton";
 import {
   CheckCircle,
   Code,
@@ -626,12 +628,7 @@ export default function Home() {
                     <p className="text-muted-foreground">
                       Get quick responses via WhatsApp
                     </p>
-                    <Button
-                      variant="link"
-                      className="p-0 h-auto text-purple-700"
-                    >
-                      Connect on WhatsApp
-                    </Button>
+                    <WhatsAppButton />
                   </div>
                 </div>
 
@@ -658,15 +655,11 @@ export default function Home() {
                     <p className="text-muted-foreground">
                       Send us a detailed message
                     </p>
-                    <Button
-                      variant="link"
-                      className="p-0 h-auto text-purple-700"
-                    >
-                      hello@purplebyte.com
-                    </Button>
+                    <EmailButton />
                   </div>
                 </div>
 
+                {/* Phone section commented out because it's not needed for now but might be in use in the future
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 rounded-full bg-purple-100 flex items-center justify-center">
                     <svg
@@ -695,6 +688,7 @@ export default function Home() {
                     </Button>
                   </div>
                 </div>
+                */}
               </div>
             </div>
 
