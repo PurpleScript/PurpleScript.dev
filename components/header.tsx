@@ -54,28 +54,10 @@ export default function Header() {
             Services
           </Link>
           <Link
-            href="/#process"
-            className="text-sm font-medium hover:text-white/80"
-          >
-            Process
-          </Link>
-          <Link
-            href="/#testimonials"
-            className="text-sm font-medium hover:text-white/80"
-          >
-            Testimonials
-          </Link>
-          <Link
             href="/#about"
             className="text-sm font-medium hover:text-white/80"
           >
             About Us
-          </Link>
-          <Link
-            href="/#contact"
-            className="text-sm font-medium hover:text-white/80"
-          >
-            Contact
           </Link>
           <Link
             href="/blog"
@@ -111,28 +93,10 @@ export default function Header() {
                   Services
                 </Link>
                 <Link
-                  href="/#process"
-                  className="text-lg font-medium hover:text-white/80"
-                >
-                  Process
-                </Link>
-                <Link
-                  href="/#testimonials"
-                  className="text-lg font-medium hover:text-white/80"
-                >
-                  Testimonials
-                </Link>
-                <Link
                   href="/#about"
                   className="text-lg font-medium hover:text-white/80"
                 >
                   About Us
-                </Link>
-                <Link
-                  href="/#contact"
-                  className="text-lg font-medium hover:text-white/80"
-                >
-                  Contact
                 </Link>
                 <Link
                   href="/blog"
