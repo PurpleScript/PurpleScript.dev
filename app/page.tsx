@@ -6,6 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import WhatsAppButton from "./components/WhatsAppButton";
 import EmailButton from "./components/EmailButton";
 import HeroSection from "./components/HeroSection";
+import ScrollToContactButton from "./components/ScrollToContactButton";
 import {
   CheckCircle,
   Code,
@@ -123,9 +124,7 @@ export default function Home() {
                   your business grow.
                 </p>
               </div>
-              <Button className="bg-white text-purple-700 hover:bg-purple-100 w-full">
-                Get in Touch
-              </Button>
+              <ScrollToContactButton />
             </div>
           </div>
         </div>
