@@ -1,14 +1,40 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Menu } from "lucide-react";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import {
+  Sheet,
+  SheetContent,
+  SheetTrigger,
+  SheetTitle,
+} from "@/components/ui/sheet";
+import { usePathname } from "next/navigation";
 
 export default function Header() {
+  const pathname = usePathname();
+
+  const scrollToContact = () => {
+    const contactSection = document.getElementById("contact");
+    contactSection?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const handleLogoClick = (e: React.MouseEvent) => {
+    if (pathname === "/") {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  };
+
   return (
     <header className="fixed top-0 w-full z-50 bg-purple-650 text-white">
       <div className="container flex h-16 items-center justify-between px-4 md:px-6">
-        <Link href="/" className="flex items-center gap-2">
+        <Link
+          href="/"
+          className="flex items-center gap-2"
+          onClick={handleLogoClick}
+        >
           <div className="relative h-10 w-10">
             <Image
               src="/images/logo.svg"
@@ -62,6 +88,7 @@ export default function Header() {
           <Button
             variant="outline"
             className="hidden md:flex border-white text-purple-700 hover:bg-white/20"
+            onClick={scrollToContact}
           >
             Contact Us
           </Button>
@@ -73,6 +100,9 @@ export default function Header() {
               </Button>
             </SheetTrigger>
             <SheetContent side="right" className="bg-purple-650 text-white">
+              <SheetTitle className="text-xl font-bold text-white mb-4">
+                Menu
+              </SheetTitle>
               <nav className="flex flex-col gap-4 mt-8">
                 <Link
                   href="/#services"
@@ -110,7 +140,10 @@ export default function Header() {
                 >
                   Blog
                 </Link>
-                <Button className="mt-4 bg-white text-purple-700 hover:bg-purple-100">
+                <Button
+                  className="mt-4 bg-white text-purple-700 hover:bg-purple-100"
+                  onClick={scrollToContact}
+                >
                   Contact Us
                 </Button>
               </nav>
