@@ -295,7 +295,7 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
                 solution that perfectly fits your business needs.
               </p>
               <Link
-                href="/contact"
+                href="/#contact"
                 className="inline-block bg-purple-600 text-white px-6 py-3 rounded-lg hover:bg-purple-700 transition-colors"
               >
                 Get Started
