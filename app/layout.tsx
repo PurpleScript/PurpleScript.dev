@@ -20,7 +20,7 @@ export const metadata = {
     title: "PurpleScript - Custom Technology Solutions",
     description:
       "We help small and medium businesses grow and operate more efficiently through custom technology solutions.",
-    url: "https://purple-byte.vercel.app/",
+    url: "https://purple-script.vercel.app/",
     siteName: "PurpleScript",
     images: [
       {
