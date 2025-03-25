@@ -24,10 +24,10 @@ export const metadata = {
     siteName: "PurpleByte",
     images: [
       {
-        url: "/images/logo.svg",
-        width: 300,
-        height: 300,
-        alt: "PurpleByte Logo",
+        url: "/images/social-preview.png",
+        width: 1200,
+        height: 630,
+        alt: "PurpleByte - Custom Technology Solutions",
       },
     ],
     locale: "en_US",
@@ -38,11 +38,11 @@ export const metadata = {
     title: "PurpleByte - Custom Technology Solutions",
     description:
       "We help small and medium businesses grow and operate more efficiently through custom technology solutions.",
-    images: ["/images/logo.svg"],
+    images: ["/images/social-preview.png"],
   },
   other: {
-    "og:image:width": "300",
-    "og:image:height": "300",
+    "og:image:width": "1200",
+    "og:image:height": "630",
   },
 };
 
