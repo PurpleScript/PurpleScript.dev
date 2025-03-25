@@ -7,6 +7,7 @@ import WhatsAppButton from "./components/WhatsAppButton";
 import EmailButton from "./components/EmailButton";
 import HeroSection from "./components/HeroSection";
 import ScrollToContactButton from "./components/ScrollToContactButton";
+import ProfilePicture from "./components/ProfilePicture";
 import {
   CheckCircle,
   Code,
@@ -517,9 +518,7 @@ export default function Home() {
             <div className="grid grid-cols-2 gap-4">
               <div className="space-y-4">
                 <div className="bg-white rounded-lg p-6 shadow-sm">
-                  <div className="w-16 h-16 rounded-full bg-purple-100 flex items-center justify-center mb-4">
-                    <span className="text-purple-700 font-bold">SZ</span>
-                  </div>
+                  <ProfilePicture />
                   <h4 className="font-semibold">Shahar Zidon</h4>
                   <p className="text-sm text-muted-foreground">Founder & CEO</p>
                 </div>
