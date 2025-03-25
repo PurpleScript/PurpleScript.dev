@@ -20,7 +20,7 @@ export const metadata = {
     title: "PurpleByte - Custom Technology Solutions",
     description:
       "We help small and medium businesses grow and operate more efficiently through custom technology solutions.",
-    url: "https://purplebyte.com",
+    url: "https://purple-byte.vercel.app/",
     siteName: "PurpleByte",
     images: [
       {
