@@ -1,28 +1,28 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
-  <!-- Eight identical rounded petals with increased width -->
+  <!-- Eight identical rounded petals with increased width AND white outline -->
   <!-- Top petal -->
-  <path d="M150 150 Q100 70, 150 40 Q200 70, 150 150" fill="#6b30c7" />
+  <path d="M150 150 Q100 70, 150 40 Q200 70, 150 150" fill="#6b30c7" stroke="white" stroke-width="1" />
   
   <!-- Top-right petal -->
-  <path d="M150 150 Q230 100, 260 150 Q230 200, 150 150" fill="#5b28b0" />
+  <path d="M150 150 Q230 100, 260 150 Q230 200, 150 150" fill="#5b28b0" stroke="white" stroke-width="1" />
   
   <!-- Right petal -->
-  <path d="M150 150 Q230 100, 260 150 Q230 200, 150 150" transform="rotate(45, 150, 150)" fill="#7138d8" />
+  <path d="M150 150 Q230 100, 260 150 Q230 200, 150 150" transform="rotate(45, 150, 150)" fill="#7138d8" stroke="white" stroke-width="1" />
   
   <!-- Bottom-right petal -->
-  <path d="M150 150 Q200 230, 150 260 Q100 230, 150 150" fill="#6b30c7" />
+  <path d="M150 150 Q200 230, 150 260 Q100 230, 150 150" fill="#6b30c7" stroke="white" stroke-width="1" />
   
   <!-- Bottom petal -->
-  <path d="M150 150 Q200 230, 150 260 Q100 230, 150 150" transform="rotate(45, 150, 150)" fill="#5b28b0" />
+  <path d="M150 150 Q200 230, 150 260 Q100 230, 150 150" transform="rotate(45, 150, 150)" fill="#5b28b0" stroke="white" stroke-width="1" />
   
   <!-- Bottom-left petal -->
-  <path d="M150 150 Q70 200, 40 150 Q70 100, 150 150" fill="#7138d8" />
+  <path d="M150 150 Q70 200, 40 150 Q70 100, 150 150" fill="#7138d8" stroke="white" stroke-width="1" />
   
   <!-- Left petal -->
-  <path d="M150 150 Q70 200, 40 150 Q70 100, 150 150" transform="rotate(45, 150, 150)" fill="#6b30c7" />
+  <path d="M150 150 Q70 200, 40 150 Q70 100, 150 150" transform="rotate(45, 150, 150)" fill="#6b30c7" stroke="white" stroke-width="1" />
   
   <!-- Top-left petal -->
-  <path d="M150 150 Q100 70, 150 40 Q200 70, 150 150" transform="rotate(45, 150, 150)" fill="#5b28b0" />
+  <path d="M150 150 Q100 70, 150 40 Q200 70, 150 150" transform="rotate(45, 150, 150)" fill="#5b28b0" stroke="white" stroke-width="1" />
   
   <!-- Inner petal highlights -->
   <path d="M150 150 Q125 100, 150 70 Q175 100, 150 150" fill="#8445e9" opacity="0.7" />

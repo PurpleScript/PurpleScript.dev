@@ -773,8 +773,9 @@ export default function Home() {
         </div>
       </section>
 
+      {/* The section below is commented out because it's not needed for now but might be in use in the future */}
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-purple-600 to-purple-800 text-white">
+      {/* <section className="py-20 bg-gradient-to-br from-purple-600 to-purple-800 text-white">
         <div className="container px-4 md:px-6 text-center">
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">
             Ready to grow your business with custom technology?
@@ -799,7 +800,7 @@ export default function Home() {
             </Button>
           </div>
         </div>
-      </section>
+      </section> */}
     </main>
   );
 }

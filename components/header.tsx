@@ -6,7 +6,7 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
 export default function Header() {
   return (
-    <header className="fixed top-0 w-full z-50 bg-purple-700 text-white">
+    <header className="fixed top-0 w-full z-50 bg-purple-650 text-white">
       <div className="container flex h-16 items-center justify-between px-4 md:px-6">
         <Link href="/" className="flex items-center gap-2">
           <div className="relative h-10 w-10">
@@ -72,7 +72,7 @@ export default function Header() {
                 <span className="sr-only">Toggle menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="bg-purple-700 text-white">
+            <SheetContent side="right" className="bg-purple-650 text-white">
               <nav className="flex flex-col gap-4 mt-8">
                 <Link
                   href="/#services"
