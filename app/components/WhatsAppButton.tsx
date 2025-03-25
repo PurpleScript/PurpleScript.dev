@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 
 export default function WhatsAppButton() {
   const handleWhatsAppClick = () => {
-    window.open("https://wa.me/972506619114", "_blank");
+    window.open("https://wa.me/972552473075", "_blank");
   };
 
   return (
