@@ -15,6 +15,7 @@ import {
   Zap,
 } from "lucide-react";
 
+// TODO: divide the sections into components
 export default function Home() {
   return (
     <main className="min-h-screen">
