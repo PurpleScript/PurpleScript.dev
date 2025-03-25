@@ -42,7 +42,7 @@ export default function Home() {
             <Button
               size="lg"
               variant="outline"
-              className="border-white text-white hover:bg-white/20"
+              className="border-white text-purple-700 hover:bg-white/20"
             >
               Learn More
             </Button>

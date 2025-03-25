@@ -61,7 +61,7 @@ export default function Header() {
         <div className="flex items-center gap-4">
           <Button
             variant="outline"
-            className="hidden md:flex border-white text-white hover:bg-white/20"
+            className="hidden md:flex border-white text-purple-700 hover:bg-white/20"
           >
             Contact Us
           </Button>
