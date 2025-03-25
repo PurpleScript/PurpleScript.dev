@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Badge } from "@/components/ui/badge";
+import WhatsAppButton from "./components/WhatsAppButton";
 import {
   CheckCircle,
   Code,
@@ -626,15 +627,7 @@ export default function Home() {
                     <p className="text-muted-foreground">
                       Get quick responses via WhatsApp
                     </p>
-                    <Button
-                      variant="link"
-                      className="p-0 h-auto text-purple-700"
-                      onClick={() =>
-                        window.open("https://wa.me/972506619114", "_blank")
-                      }
-                    >
-                      Connect on WhatsApp
-                    </Button>
+                    <WhatsAppButton />
                   </div>
                 </div>
 
