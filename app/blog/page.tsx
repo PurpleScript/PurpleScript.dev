@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Blog | PurpleScript - Custom Software Development",
@@ -6,134 +7,82 @@ export const metadata: Metadata = {
     "Insights and thoughts about custom software development, technology trends, and digital transformation.",
 };
 
+// This would typically come from a CMS or database
+const blogPosts = [
+  {
+    id: "custom-software-2025",
+    title: "Why Custom Software Development is Essential in 2025",
+    excerpt:
+      "In an era where no-code and low-code platforms promise to democratize software development, the value of custom software development has never been more critical.",
+    date: "2024-03-20",
+    readTime: "5 min read",
+  },
+  {
+    id: "ai-development-2024",
+    title: "The Impact of AI on Modern Software Development",
+    excerpt:
+      "Artificial Intelligence is revolutionizing how we develop software. Learn how AI-powered tools are enhancing developer productivity and code quality.",
+    date: "2024-03-15",
+    readTime: "4 min read",
+  },
+  {
+    id: "microservices-vs-monolith",
+    title: "Microservices vs Monolith: Making the Right Choice",
+    excerpt:
+      "Choosing between microservices and monolithic architecture is a crucial decision. We break down the pros and cons to help you make an informed choice.",
+    date: "2024-03-10",
+    readTime: "6 min read",
+  },
+];
+
 export default function BlogPage() {
   return (
-    <div className="container mx-auto px-4 py-12">
-      <h1 className="text-4xl font-bold mb-8">Blog</h1>
+    <main className="min-h-screen bg-gradient-to-b from-purple-900 to-purple-800">
+      <div className="container mx-auto px-4 py-24">
+        <div className="max-w-4xl mx-auto">
+          <h1 className="text-4xl font-bold text-white mb-8">
+            Latest Insights
+          </h1>
 
-      <article className="prose prose-lg max-w-none">
-        <h2 className="text-3xl font-bold mb-4">
-          Why Custom Software Development is Essential in 2025
-        </h2>
-        <div className="text-gray-600 mb-6">
-          <time dateTime="2024-03-20">March 20, 2024</time>
-          <span className="mx-2">•</span>
-          <span>5 min read</span>
-        </div>
-
-        <div className="space-y-6">
-          <p>
-            In an era where no-code and low-code platforms promise to
-            democratize software development, the value of custom software
-            development has never been more critical. While these platforms
-            offer quick solutions for basic needs, they fall short when it comes
-            to creating truly innovative, scalable, and competitive solutions.
-          </p>
-
-          <h3 className="text-2xl font-semibold mt-8">
-            The Limitations of No-Code Solutions
-          </h3>
-          <p>
-            No-code platforms like WordPress and Wix have revolutionized how we
-            create websites and basic applications. However, they come with
-            significant limitations:
-          </p>
-          <ul className="list-disc pl-6 space-y-2">
-            <li>
-              Limited customization options that can't match your unique
-              business needs
-            </li>
-            <li>
-              Performance bottlenecks due to generic code and unnecessary
-              features
-            </li>
-            <li>
-              Security vulnerabilities from widely-used templates and plugins
-            </li>
-            <li>
-              Scalability issues when your business grows beyond basic needs
-            </li>
-            <li>
-              Vendor lock-in that makes it difficult to migrate or modify your
-              solution
-            </li>
-          </ul>
-
-          <h3 className="text-2xl font-semibold mt-8">
-            The Power of Custom Software Development
-          </h3>
-          <p>
-            Custom software development offers several key advantages that are
-            becoming increasingly important in 2025:
-          </p>
-          <ul className="list-disc pl-6 space-y-2">
-            <li>
-              Tailored solutions that perfectly align with your business
-              processes
-            </li>
-            <li>Optimized performance and resource utilization</li>
-            <li>
-              Enhanced security through custom-built protection mechanisms
-            </li>
-            <li>
-              Seamless integration with your existing systems and workflows
-            </li>
-            <li>Scalability that grows with your business</li>
-            <li>
-              Competitive advantage through unique features and capabilities
-            </li>
-          </ul>
-
-          <h3 className="text-2xl font-semibold mt-8">
-            The Role of Professional Developers
-          </h3>
-          <p>
-            Professional developers bring more than just coding skills to the
-            table. They provide:
-          </p>
-          <ul className="list-disc pl-6 space-y-2">
-            <li>Deep technical expertise and best practices</li>
-            <li>Problem-solving abilities for complex business challenges</li>
-            <li>
-              Experience with security, scalability, and performance
-              optimization
-            </li>
-            <li>Understanding of user experience and interface design</li>
-            <li>
-              Ability to implement cutting-edge technologies and methodologies
-            </li>
-          </ul>
-
-          <h3 className="text-2xl font-semibold mt-8">
-            Making the Right Choice
-          </h3>
-          <p>
-            While no-code solutions might seem attractive for their speed and
-            low initial cost, they often lead to technical debt and limitations
-            that become apparent as your business grows. Custom software
-            development, though requiring more initial investment, provides a
-            foundation for sustainable growth and innovation.
-          </p>
-
-          <div className="bg-gray-50 p-6 rounded-lg mt-8">
-            <h4 className="text-xl font-semibold mb-4">
-              Ready to Build Your Custom Solution?
-            </h4>
-            <p className="mb-4">
-              At PurpleScript, we specialize in creating custom software
-              solutions that drive business growth and innovation. Our team of
-              experienced developers works closely with you to understand your
-              unique needs and deliver solutions that exceed expectations.
-            </p>
-            <a
-              href="/contact"
-              className="inline-block bg-purple-600 text-white px-6 py-3 rounded-lg hover:bg-purple-700 transition-colors"
-            >
-              Get Started
-            </a>
+          <div className="space-y-6">
+            {blogPosts.map((post) => (
+              <Link
+                key={post.id}
+                href={`/blog/${post.id}`}
+                className="block bg-white rounded-lg shadow-xl transform transition-transform hover:scale-[1.02] hover:shadow-2xl"
+              >
+                <article className="p-6">
+                  <div className="flex items-center text-sm text-purple-600 mb-2">
+                    <time dateTime={post.date}>{post.date}</time>
+                    <span className="mx-2">•</span>
+                    <span>{post.readTime}</span>
+                  </div>
+                  <h2 className="text-2xl font-bold text-gray-900 mb-3">
+                    {post.title}
+                  </h2>
+                  <p className="text-gray-600">{post.excerpt}</p>
+                  <div className="mt-4 flex items-center text-purple-600">
+                    Read more
+                    <svg
+                      className="w-4 h-4 ml-2"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M9 5l7 7-7 7"
+                      />
+                    </svg>
+                  </div>
+                </article>
+              </Link>
+            ))}
           </div>
         </div>
-      </article>
-    </div>
+      </div>
+    </main>
   );
 }
