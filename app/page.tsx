@@ -6,6 +6,8 @@ import { Badge } from "@/components/ui/badge";
 import WhatsAppButton from "./components/WhatsAppButton";
 import EmailButton from "./components/EmailButton";
 import HeroSection from "./components/HeroSection";
+import ScrollToContactButton from "./components/ScrollToContactButton";
+import ProfilePicture from "./components/ProfilePicture";
 import {
   CheckCircle,
   Code,
@@ -13,7 +15,9 @@ import {
   MessageCircle,
   ShoppingBag,
   Zap,
+  Linkedin,
 } from "lucide-react";
+import Link from "next/link";
 
 // TODO: divide the sections into components
 export default function Home() {
@@ -123,9 +127,7 @@ export default function Home() {
                   your business grow.
                 </p>
               </div>
-              <Button className="bg-white text-purple-700 hover:bg-purple-100 w-full">
-                Get in Touch
-              </Button>
+              <ScrollToContactButton />
             </div>
           </div>
         </div>
@@ -518,11 +520,21 @@ export default function Home() {
             <div className="grid grid-cols-2 gap-4">
               <div className="space-y-4">
                 <div className="bg-white rounded-lg p-6 shadow-sm">
-                  <div className="w-16 h-16 rounded-full bg-purple-100 flex items-center justify-center mb-4">
-                    <span className="text-purple-700 font-bold">SZ</span>
+                  <div className="flex flex-col items-center text-center">
+                    <ProfilePicture />
+                    <h4 className="font-semibold mt-2">Shahar Zidon</h4>
+                    <p className="text-sm text-muted-foreground">
+                      Founder & CEO
+                    </p>
+                    <Link
+                      href="https://www.linkedin.com/in/shahar-zidon/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-2 text-purple-700 hover:text-purple-800 transition-colors"
+                    >
+                      <Linkedin className="h-5 w-5" />
+                    </Link>
                   </div>
-                  <h4 className="font-semibold">Shahar Zidon</h4>
-                  <p className="text-sm text-muted-foreground">Founder & CEO</p>
                 </div>
                 {/* <div className="bg-white rounded-lg p-6 shadow-sm">
                   <div className="w-16 h-16 rounded-full bg-purple-100 flex items-center justify-center mb-4">
