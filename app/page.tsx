@@ -15,6 +15,7 @@ import {
   Zap,
 } from "lucide-react";
 
+// TODO: divide the sections into components
 export default function Home() {
   return (
     <main className="min-h-screen">
@@ -351,17 +352,17 @@ export default function Home() {
                   <CardContent className="p-6">
                     <div className="flex items-center gap-4 mb-4">
                       <div className="w-12 h-12 rounded-full bg-purple-100 flex items-center justify-center">
-                        <span className="text-purple-700 font-bold">LR</span>
+                        <span className="text-purple-700 font-bold">RH</span>
                       </div>
                       <div>
-                        <h4 className="font-semibold">Lisa Rodriguez</h4>
+                        <h4 className="font-semibold">Ron Hazan</h4>
                         <p className="text-sm text-muted-foreground">
-                          Director, Bright Consulting
+                          CPO, All Services
                         </p>
                       </div>
                     </div>
                     <p className="text-muted-foreground mb-4">
-                      "PurpleScript's WhatsApp Business solution has
+                      "PurpleScript's advanced landing page solution has
                       revolutionized our client communication. We're now able to
                       provide faster support and close deals more efficiently.
                       The ROI has been incredible."
