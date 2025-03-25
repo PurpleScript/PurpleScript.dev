@@ -524,7 +524,7 @@ export default function Home() {
                 businesses grow
               </h2>
               <p className="text-lg text-muted-foreground mb-6">
-                Founded in 2020, PurpleByte has been helping small and medium
+                Founded in 2024, PurpleByte has been helping small and medium
                 businesses leverage technology to achieve their goals. Our team
                 combines technical expertise with business acumen to deliver
                 solutions that drive real results.
@@ -566,20 +566,21 @@ export default function Home() {
               <div className="space-y-4">
                 <div className="bg-white rounded-lg p-6 shadow-sm">
                   <div className="w-16 h-16 rounded-full bg-purple-100 flex items-center justify-center mb-4">
-                    <span className="text-purple-700 font-bold">JS</span>
+                    <span className="text-purple-700 font-bold">SZ</span>
                   </div>
-                  <h4 className="font-semibold">Jane Smith</h4>
+                  <h4 className="font-semibold">Shahar Zidon</h4>
                   <p className="text-sm text-muted-foreground">Founder & CEO</p>
                 </div>
-                <div className="bg-white rounded-lg p-6 shadow-sm">
+                {/* <div className="bg-white rounded-lg p-6 shadow-sm">
                   <div className="w-16 h-16 rounded-full bg-purple-100 flex items-center justify-center mb-4">
                     <span className="text-purple-700 font-bold">RK</span>
                   </div>
                   <h4 className="font-semibold">Robert Kim</h4>
                   <p className="text-sm text-muted-foreground">CTO</p>
-                </div>
+                </div> */}
               </div>
-              <div className="space-y-4 mt-8">
+              {/* Add the team members here for future use*/}
+              {/* <div className="space-y-4 mt-8">
                 <div className="bg-white rounded-lg p-6 shadow-sm">
                   <div className="w-16 h-16 rounded-full bg-purple-100 flex items-center justify-center mb-4">
                     <span className="text-purple-700 font-bold">MP</span>
@@ -596,7 +597,7 @@ export default function Home() {
                   <h4 className="font-semibold">Tom Jackson</h4>
                   <p className="text-sm text-muted-foreground">Design Lead</p>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
