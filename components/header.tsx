@@ -4,7 +4,12 @@ import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Menu } from "lucide-react";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import {
+  Sheet,
+  SheetContent,
+  SheetTrigger,
+  SheetTitle,
+} from "@/components/ui/sheet";
 import { usePathname } from "next/navigation";
 
 export default function Header() {
@@ -95,6 +100,9 @@ export default function Header() {
               </Button>
             </SheetTrigger>
             <SheetContent side="right" className="bg-purple-650 text-white">
+              <SheetTitle className="text-xl font-bold text-white mb-4">
+                Menu
+              </SheetTitle>
               <nav className="flex flex-col gap-4 mt-8">
                 <Link
                   href="/#services"
