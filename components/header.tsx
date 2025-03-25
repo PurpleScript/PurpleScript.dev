@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
@@ -5,6 +7,11 @@ import { Menu } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
 export default function Header() {
+  const scrollToContact = () => {
+    const contactSection = document.getElementById("contact");
+    contactSection?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <header className="fixed top-0 w-full z-50 bg-purple-650 text-white">
       <div className="container flex h-16 items-center justify-between px-4 md:px-6">
@@ -62,6 +69,7 @@ export default function Header() {
           <Button
             variant="outline"
             className="hidden md:flex border-white text-purple-700 hover:bg-white/20"
+            onClick={scrollToContact}
           >
             Contact Us
           </Button>
@@ -110,7 +118,10 @@ export default function Header() {
                 >
                   Blog
                 </Link>
-                <Button className="mt-4 bg-white text-purple-700 hover:bg-purple-100">
+                <Button
+                  className="mt-4 bg-white text-purple-700 hover:bg-purple-100"
+                  onClick={scrollToContact}
+                >
                   Contact Us
                 </Button>
               </nav>
