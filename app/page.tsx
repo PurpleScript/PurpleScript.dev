@@ -667,6 +667,7 @@ export default function Home() {
                   </div>
                 </div>
 
+                {/* Phone section commented out because it's not needed for now but might be in use in the future
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 rounded-full bg-purple-100 flex items-center justify-center">
                     <svg
@@ -695,6 +696,7 @@ export default function Home() {
                     </Button>
                   </div>
                 </div>
+                */}
               </div>
             </div>
 
