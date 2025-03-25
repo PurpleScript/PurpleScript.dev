@@ -4,6 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Badge } from "@/components/ui/badge";
 import WhatsAppButton from "./components/WhatsAppButton";
+import EmailButton from "./components/EmailButton";
 import {
   CheckCircle,
   Code,
@@ -654,12 +655,7 @@ export default function Home() {
                     <p className="text-muted-foreground">
                       Send us a detailed message
                     </p>
-                    <Button
-                      variant="link"
-                      className="p-0 h-auto text-purple-700"
-                    >
-                      hello@purplebyte.com
-                    </Button>
+                    <EmailButton />
                   </div>
                 </div>
 
