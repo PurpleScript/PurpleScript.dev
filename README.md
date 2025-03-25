@@ -1,1 +1,1 @@
-# PurpleByte
+# PurpleScript

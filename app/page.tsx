@@ -29,7 +29,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-purple-900/30 z-10"></div>
         <div className="container relative z-20 text-center px-4 md:px-6">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tighter mb-6">
-            PurpleByte
+            PurpleScript
           </h1>
           <p className="text-xl md:text-2xl lg:text-3xl max-w-3xl mx-auto mb-8">
             Make your software vision become a reality
@@ -272,7 +272,7 @@ export default function Home() {
             </h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
               Don't just take our word for it. Here's what our clients have to
-              say about working with PurpleByte.
+              say about working with PurpleScript.
             </p>
           </div>
 
@@ -298,7 +298,7 @@ export default function Home() {
                       </div>
                     </div>
                     <p className="text-muted-foreground mb-4">
-                      "PurpleByte transformed our online store with custom
+                      "PurpleScript transformed our online store with custom
                       Shopify integrations that increased our conversion rate by
                       35%. Their team was responsive, professional, and
                       delivered exactly what we needed."
@@ -334,7 +334,7 @@ export default function Home() {
                       </div>
                     </div>
                     <p className="text-muted-foreground mb-4">
-                      "The landing page PurpleByte created for our product
+                      "The landing page PurpleScript created for our product
                       launch was stunning and effective. We saw a 40% increase
                       in sign-ups compared to our previous campaigns. I highly
                       recommend their services!"
@@ -373,7 +373,7 @@ export default function Home() {
                       </div>
                     </div>
                     <p className="text-muted-foreground mb-4">
-                      "The custom CRM PurpleByte built for our fitness studio
+                      "The custom CRM PurpleScript built for our fitness studio
                       has streamlined our entire operation. We've reduced
                       administrative work by 60% and improved client retention
                       through better follow-ups."
@@ -409,7 +409,7 @@ export default function Home() {
                       </div>
                     </div>
                     <p className="text-muted-foreground mb-4">
-                      "PurpleByte's WhatsApp Business solution has
+                      "PurpleScript's WhatsApp Business solution has
                       revolutionized our client communication. We're now able to
                       provide faster support and close deals more efficiently.
                       The ROI has been incredible."
@@ -448,9 +448,9 @@ export default function Home() {
                       </div>
                     </div>
                     <p className="text-muted-foreground mb-4">
-                      "The automation system PurpleByte implemented has cut our
-                      invoice processing time by 75%. Their team took the time
-                      to understand our complex workflows and delivered a
+                      "The automation system PurpleScript implemented has cut
+                      our invoice processing time by 75%. Their team took the
+                      time to understand our complex workflows and delivered a
                       solution that exceeded our expectations."
                     </p>
                     <div className="flex text-yellow-400">
@@ -484,7 +484,7 @@ export default function Home() {
                       </div>
                     </div>
                     <p className="text-muted-foreground mb-4">
-                      "PurpleByte developed an internal tool that has
+                      "PurpleScript developed an internal tool that has
                       transformed how we track inventory and manage production.
                       The system is intuitive, reliable, and has helped us
                       reduce waste by 30%."
@@ -524,7 +524,7 @@ export default function Home() {
                 businesses grow
               </h2>
               <p className="text-lg text-muted-foreground mb-6">
-                Founded in 2024, PurpleByte has been helping small and medium
+                Founded in 2024, PurpleScript has been helping small and medium
                 businesses leverage technology to achieve their goals. Our team
                 combines technical expertise with business acumen to deliver
                 solutions that drive real results.
