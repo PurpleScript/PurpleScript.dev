@@ -629,6 +629,9 @@ export default function Home() {
                     <Button
                       variant="link"
                       className="p-0 h-auto text-purple-700"
+                      onClick={() =>
+                        window.open("https://wa.me/972506619114", "_blank")
+                      }
                     >
                       Connect on WhatsApp
                     </Button>
