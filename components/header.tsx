@@ -11,9 +11,29 @@ import {
   SheetTitle,
 } from "@/components/ui/sheet";
 import { usePathname } from "next/navigation";
+import LanguageSwitcher from "./language-switcher";
+
+// Simple translations object
+const translations = {
+  en: {
+    services: "Services",
+    aboutUs: "About Us",
+    blog: "Blog",
+    contactUs: "Contact Us",
+  },
+  he: {
+    services: "שירותים",
+    aboutUs: "אודותינו",
+    blog: "בלוג",
+    contactUs: "צור קשר",
+  },
+};
 
 export default function Header() {
   const pathname = usePathname();
+  // Determine current locale from URL path or default to 'en'
+  const locale = pathname?.startsWith("/he") ? "he" : "en";
+  const t = translations[locale as keyof typeof translations];
 
   const scrollToContact = () => {
     const contactSection = document.getElementById("contact");
@@ -51,28 +71,29 @@ export default function Header() {
             href="/#services"
             className="text-sm font-medium hover:text-white/80"
           >
-            Services
+            {t.services}
           </Link>
           <Link
             href="/#about"
             className="text-sm font-medium hover:text-white/80"
           >
-            About Us
+            {t.aboutUs}
           </Link>
           <Link
             href="/blog"
             className="text-sm font-medium hover:text-white/80"
           >
-            Blog
+            {t.blog}
           </Link>
         </nav>
         <div className="flex items-center gap-4">
+          <LanguageSwitcher currentLocale={locale} />
           <Button
             variant="outline"
             className="hidden md:flex border-white text-purple-700 hover:bg-white/20"
             onClick={scrollToContact}
           >
-            Contact Us
+            {t.contactUs}
           </Button>
           <Sheet>
             <SheetTrigger asChild>
@@ -90,25 +111,25 @@ export default function Header() {
                   href="/#services"
                   className="text-lg font-medium hover:text-white/80"
                 >
-                  Services
+                  {t.services}
                 </Link>
                 <Link
                   href="/#about"
                   className="text-lg font-medium hover:text-white/80"
                 >
-                  About Us
+                  {t.aboutUs}
                 </Link>
                 <Link
                   href="/blog"
                   className="text-lg font-medium hover:text-white/80"
                 >
-                  Blog
+                  {t.blog}
                 </Link>
                 <Button
                   className="mt-4 bg-white text-purple-700 hover:bg-purple-100"
                   onClick={scrollToContact}
                 >
-                  Contact Us
+                  {t.contactUs}
                 </Button>
               </nav>
             </SheetContent>

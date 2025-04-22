@@ -2,8 +2,30 @@
 
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
+import { usePathname } from "next/navigation";
+
+// Simple translations object
+const translations = {
+  en: {
+    subtitle:
+      "We help small and medium businesses grow and operate more efficiently through custom technology solutions.",
+    cta: "Get Started",
+    learnMore: "Learn More",
+  },
+  he: {
+    subtitle:
+      "אנו עוזרים לעסקים קטנים ובינוניים לצמוח ולפעול ביעילות רבה יותר באמצעות פתרונות טכנולוגיים מותאמים אישית.",
+    cta: "בואו נתחיל",
+    learnMore: "למידע נוסף",
+  },
+};
 
 export default function HeroSection() {
+  const pathname = usePathname();
+  // Determine current locale from URL path or default to 'en'
+  const locale = pathname?.startsWith("/he") ? "he" : "en";
+  const t = translations[locale as keyof typeof translations];
+
   const scrollToSection = (sectionId: string) => {
     const section = document.getElementById(sectionId);
     section?.scrollIntoView({ behavior: "smooth" });
@@ -24,7 +46,7 @@ export default function HeroSection() {
           PurpleScript
         </h1>
         <p className="text-xl md:text-2xl lg:text-3xl max-w-3xl mx-auto mb-8">
-          Make your software vision become a reality
+          {t.subtitle}
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Button
@@ -32,7 +54,7 @@ export default function HeroSection() {
             className="bg-white text-purple-700 hover:bg-purple-100"
             onClick={() => scrollToSection("contact")}
           >
-            Get Started
+            {t.cta}
           </Button>
           <Button
             size="lg"
@@ -40,7 +62,7 @@ export default function HeroSection() {
             className="border-white text-purple-700 hover:bg-white/20"
             onClick={() => scrollToSection("services")}
           >
-            Learn More
+            {t.learnMore}
           </Button>
         </div>
       </div>

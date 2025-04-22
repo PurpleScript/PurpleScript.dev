@@ -48,11 +48,19 @@ export const metadata = {
 
 export default function RootLayout({
   children,
+  params,
 }: Readonly<{
   children: React.ReactNode;
+  params?: { locale?: string };
 }>) {
+  const locale = params?.locale || "en";
+
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html
+      lang={locale}
+      suppressHydrationWarning
+      dir={locale === "he" ? "rtl" : "ltr"}
+    >
       <body className={inter.className}>
         <ThemeProvider
           attribute="class"

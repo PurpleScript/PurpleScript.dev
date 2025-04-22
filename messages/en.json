@@ -1,0 +1,20 @@
+{
+  "header": {
+    "services": "Services",
+    "aboutUs": "About Us",
+    "blog": "Blog",
+    "contactUs": "Contact Us"
+  },
+  "footer": {
+    "copyright": "© 2025 PurpleScript. All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service"
+  },
+  "home": {
+    "hero": {
+      "title": "Custom Technology Solutions",
+      "subtitle": "We help small and medium businesses grow and operate more efficiently through custom technology solutions.",
+      "cta": "Get Started"
+    }
+  }
+} 

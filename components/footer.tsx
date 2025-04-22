@@ -1,9 +1,31 @@
+"use client";
+
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
+import { usePathname } from "next/navigation";
+
+// Simple translations object
+const translations = {
+  en: {
+    copyright: "© 2025 PurpleScript. All rights reserved.",
+    privacy: "Privacy Policy",
+    terms: "Terms of Service",
+  },
+  he: {
+    copyright: "© 2025 PurpleScript. כל הזכויות שמורות.",
+    privacy: "מדיניות פרטיות",
+    terms: "תנאי שימוש",
+  },
+};
 
 export default function Footer() {
+  const pathname = usePathname();
+  // Determine current locale from URL path or default to 'en'
+  const locale = pathname?.startsWith("/he") ? "he" : "en";
+  const t = translations[locale as keyof typeof translations];
+
   return (
     <footer className="bg-purple-900 text-white py-12 md:py-16">
       <div className="container px-4 md:px-6">
@@ -77,12 +99,12 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="#" className="text-white/70 hover:text-white">
-                  Privacy Policy
+                  {t.privacy}
                 </Link>
               </li>
               <li>
                 <Link href="#" className="text-white/70 hover:text-white">
-                  Terms of Service
+                  {t.terms}
                 </Link>
               </li>
             </ul>
@@ -105,7 +127,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="border-t border-white/10 pt-8 text-center text-white/70">
-          <p>© {new Date().getFullYear()} PurpleScript. All rights reserved.</p>
+          <p>{t.copyright}</p>
         </div>
       </div>
     </footer>
