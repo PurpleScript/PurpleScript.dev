@@ -48,10 +48,16 @@ export default function Header() {
         </Link>
         <nav className="hidden md:flex gap-6">
           <Link
-            href="/#services"
+            href="/services"
             className="text-sm font-medium hover:text-white/80"
           >
             Services
+          </Link>
+          <Link
+            href="/products"
+            className="text-sm font-medium hover:text-white/80"
+          >
+            Products
           </Link>
           <Link
             href="/#about"
@@ -87,10 +93,16 @@ export default function Header() {
               </SheetTitle>
               <nav className="flex flex-col gap-4 mt-8">
                 <Link
-                  href="/#services"
+                  href="/services"
                   className="text-lg font-medium hover:text-white/80"
                 >
                   Services
+                </Link>
+                <Link
+                  href="/products"
+                  className="text-lg font-medium hover:text-white/80"
+                >
+                  Products
                 </Link>
                 <Link
                   href="/#about"
