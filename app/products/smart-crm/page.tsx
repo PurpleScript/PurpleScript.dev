@@ -41,10 +41,10 @@ export default function SmartCrmPage() {
                 our intelligent CRM system powered by advanced AI analytics.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link href="/#contact">
+                <Link href="/#contact" className="w-full sm:w-auto">
                   <Button
                     size="lg"
-                    className="bg-white text-purple-900 hover:bg-purple-100"
+                    className="bg-white text-purple-900 hover:bg-purple-100 w-full"
                   >
                     Get Started
                   </Button>
@@ -52,7 +52,7 @@ export default function SmartCrmPage() {
                 <Button
                   size="lg"
                   variant="outline"
-                  className="border-white text-white hover:bg-purple-800"
+                  className="border-white text-white hover:bg-purple-800 border-2"
                   onClick={scrollToPricing}
                 >
                   View Pricing
@@ -160,7 +160,7 @@ export default function SmartCrmPage() {
                     </div>
                   </div>
 
-                  <Link href="/#contact">
+                  <Link href="/#contact" className="block w-full">
                     <Button className="w-full bg-purple-700 hover:bg-purple-800">
                       Get Started
                     </Button>
@@ -561,23 +561,16 @@ export default function SmartCrmPage() {
             AI-driven business intelligence.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/#contact">
-              <Button
-                size="lg"
-                className="bg-white text-purple-900 hover:bg-purple-100"
-              >
+            <a href="/#contact" className="block w-full sm:w-auto">
+              <button className="h-12 px-8 rounded-md bg-white text-purple-900 hover:bg-purple-100 w-full text-base font-medium">
                 Get Started
-              </Button>
-            </Link>
-            <Link href="/products">
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-white text-white hover:bg-purple-800"
-              >
+              </button>
+            </a>
+            <a href="/products" className="block w-full sm:w-auto">
+              <button className="h-12 px-8 rounded-md border-2 border-white text-white hover:bg-purple-800 w-full text-base font-medium">
                 Explore Other Products
-              </Button>
-            </Link>
+              </button>
+            </a>
           </div>
         </div>
       </section>
