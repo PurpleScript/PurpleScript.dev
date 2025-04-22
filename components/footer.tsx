@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
+import { Facebook, Instagram, Linkedin } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -17,10 +17,6 @@ export default function Footer() {
               <Link href="#" className="text-white/70 hover:text-white">
                 <Facebook className="h-5 w-5" />
                 <span className="sr-only">Facebook</span>
-              </Link>
-              <Link href="#" className="text-white/70 hover:text-white">
-                <Twitter className="h-5 w-5" />
-                <span className="sr-only">Twitter</span>
               </Link>
               <Link href="#" className="text-white/70 hover:text-white">
                 <Instagram className="h-5 w-5" />
