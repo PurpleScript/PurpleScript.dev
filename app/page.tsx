@@ -208,7 +208,7 @@ export default function Home() {
             </div>
             <div className="relative h-[300px] md:h-[400px] rounded-lg overflow-hidden">
               <Image
-                src="/images/hero-bg-snow.jpg"
+                src="/images/crm-dashboard.jpg"
                 alt="Smart CRM Dashboard"
                 fill
                 className="object-cover"
