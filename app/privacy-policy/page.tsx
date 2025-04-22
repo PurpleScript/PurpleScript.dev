@@ -190,7 +190,7 @@ export default function PrivacyPolicyPage() {
           <p className="mb-2">
             Email:{" "}
             <a
-              href="mailto:privacy@purplescript.dev"
+              href="mailto:office@purplescript.dev"
               className="text-purple-700 hover:underline"
             >
               privacy@purplescript.dev
