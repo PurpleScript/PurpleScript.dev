@@ -20,20 +20,28 @@ const translations = {
     aboutUs: "About Us",
     blog: "Blog",
     contactUs: "Contact Us",
+    menu: "Menu",
   },
   he: {
     services: "שירותים",
     aboutUs: "אודותינו",
     blog: "בלוג",
     contactUs: "צור קשר",
+    menu: "תפריט",
   },
 };
 
 export default function Header() {
-  const pathname = usePathname();
+  const pathname = usePathname() || "";
   // Determine current locale from URL path or default to 'en'
-  const locale = pathname?.startsWith("/he") ? "he" : "en";
+  const locale = pathname.startsWith("/he") ? "he" : "en";
   const t = translations[locale as keyof typeof translations];
+
+  // Build localized links
+  const getLocalizedHref = (path: string) => {
+    // Keep the current locale in the path
+    return locale === "en" ? path : `/he${path}`;
+  };
 
   const scrollToContact = () => {
     const contactSection = document.getElementById("contact");
@@ -41,7 +49,7 @@ export default function Header() {
   };
 
   const handleLogoClick = (e: React.MouseEvent) => {
-    if (pathname === "/") {
+    if (pathname === "/" || pathname === "/he") {
       e.preventDefault();
       window.scrollTo({ top: 0, behavior: "smooth" });
     }
@@ -51,7 +59,7 @@ export default function Header() {
     <header className="fixed top-0 w-full z-50 bg-purple-650 text-white">
       <div className="container flex h-16 items-center justify-between px-4 md:px-6">
         <Link
-          href="/"
+          href={locale === "en" ? "/en" : "/he"}
           className="flex items-center gap-2"
           onClick={handleLogoClick}
         >
@@ -68,19 +76,19 @@ export default function Header() {
         </Link>
         <nav className="hidden md:flex gap-6">
           <Link
-            href="/#services"
+            href={getLocalizedHref("/#services")}
             className="text-sm font-medium hover:text-white/80"
           >
             {t.services}
           </Link>
           <Link
-            href="/#about"
+            href={getLocalizedHref("/#about")}
             className="text-sm font-medium hover:text-white/80"
           >
             {t.aboutUs}
           </Link>
           <Link
-            href="/blog"
+            href={getLocalizedHref("/blog")}
             className="text-sm font-medium hover:text-white/80"
           >
             {t.blog}
@@ -90,7 +98,7 @@ export default function Header() {
           <LanguageSwitcher currentLocale={locale} />
           <Button
             variant="outline"
-            className="hidden md:flex border-white text-purple-700 hover:bg-white/20"
+            className="hidden md:flex border-white text-white hover:bg-white/20"
             onClick={scrollToContact}
           >
             {t.contactUs}
@@ -102,25 +110,28 @@ export default function Header() {
                 <span className="sr-only">Toggle menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="bg-purple-650 text-white">
+            <SheetContent
+              side={locale === "he" ? "left" : "right"}
+              className="bg-purple-650 text-white"
+            >
               <SheetTitle className="text-xl font-bold text-white mb-4">
-                Menu
+                {t.menu}
               </SheetTitle>
               <nav className="flex flex-col gap-4 mt-8">
                 <Link
-                  href="/#services"
+                  href={getLocalizedHref("/#services")}
                   className="text-lg font-medium hover:text-white/80"
                 >
                   {t.services}
                 </Link>
                 <Link
-                  href="/#about"
+                  href={getLocalizedHref("/#about")}
                   className="text-lg font-medium hover:text-white/80"
                 >
                   {t.aboutUs}
                 </Link>
                 <Link
-                  href="/blog"
+                  href={getLocalizedHref("/blog")}
                   className="text-lg font-medium hover:text-white/80"
                 >
                   {t.blog}

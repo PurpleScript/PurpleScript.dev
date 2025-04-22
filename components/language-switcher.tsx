@@ -20,17 +20,29 @@ export default function LanguageSwitcher({
   const router = useRouter();
 
   const handleLanguageChange = (newLocale: string) => {
-    // Get current URL path
-    const currentPath = window.location.pathname;
+    // Skip if trying to switch to the same locale
+    if (newLocale === currentLocale) return;
 
-    // Handle the localized paths
-    if (currentLocale === "he" && newLocale === "en") {
-      // Going from Hebrew to English (default)
-      router.push(currentPath.replace(/^\/he/, ""));
-    } else if (currentLocale === "en" && newLocale === "he") {
-      // Going from English to Hebrew
-      router.push(`/he${currentPath}`);
+    // Get path without the locale prefix
+    let path = window.location.pathname;
+    const pathParts = path.split("/").filter(Boolean);
+
+    // If the first part is a locale, remove it
+    if (pathParts.length > 0 && ["en", "he"].includes(pathParts[0])) {
+      pathParts.shift();
     }
+
+    // Build the new path with the new locale
+    const newPath =
+      newLocale === "en"
+        ? pathParts.length > 0
+          ? "/en/" + pathParts.join("/")
+          : "/en"
+        : pathParts.length > 0
+        ? "/he/" + pathParts.join("/")
+        : "/he";
+
+    router.push(newPath);
   };
 
   return (

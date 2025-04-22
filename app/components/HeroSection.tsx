@@ -21,9 +21,9 @@ const translations = {
 };
 
 export default function HeroSection() {
-  const pathname = usePathname();
-  // Determine current locale from URL path or default to 'en'
-  const locale = pathname?.startsWith("/he") ? "he" : "en";
+  // Determine current locale from URL path
+  const pathname = usePathname() || "";
+  const locale = pathname.startsWith("/he") ? "he" : "en";
   const t = translations[locale as keyof typeof translations];
 
   const scrollToSection = (sectionId: string) => {
@@ -31,8 +31,13 @@ export default function HeroSection() {
     section?.scrollIntoView({ behavior: "smooth" });
   };
 
+  // For the Hebrew version, we need to set appropriate RTL classes
+  const rtlClass = locale === "he" ? "rtl" : "";
+
   return (
-    <section className="relative h-screen flex flex-col items-center justify-center text-white overflow-hidden">
+    <section
+      className={`relative h-screen flex flex-col items-center justify-center text-white overflow-hidden ${rtlClass}`}
+    >
       <Image
         src="/images/hero-bg-snow.jpg"
         alt="Snow covered mountains"
@@ -59,7 +64,7 @@ export default function HeroSection() {
           <Button
             size="lg"
             variant="outline"
-            className="border-white text-purple-700 hover:bg-white/20"
+            className="border-white text-white hover:bg-white/20"
             onClick={() => scrollToSection("services")}
           >
             {t.learnMore}

@@ -12,29 +12,63 @@ const translations = {
     copyright: "© 2025 PurpleScript. All rights reserved.",
     privacy: "Privacy Policy",
     terms: "Terms of Service",
+    subscribe: "Subscribe",
+    subscribeText: "Stay updated with our latest news and offers.",
+    emailPlaceholder: "Your email",
+    company: "Company",
+    aboutUs: "About Us",
+    blog: "Blog",
+    services: "Services",
+    landingPages: "Landing Pages",
+    customCRMs: "Custom CRMs",
+    businessAutomations: "Business Automations",
+    whatsAppBusiness: "WhatsApp Business",
+    shopifyIntegrations: "Shopify Integrations",
+    customSolutions:
+      "Custom technology solutions for small and medium businesses.",
   },
   he: {
     copyright: "© 2025 PurpleScript. כל הזכויות שמורות.",
     privacy: "מדיניות פרטיות",
     terms: "תנאי שימוש",
+    subscribe: "הירשם",
+    subscribeText: "הישאר מעודכן עם החדשות והמבצעים האחרונים שלנו.",
+    emailPlaceholder: "האימייל שלך",
+    company: "חברה",
+    aboutUs: "אודותינו",
+    blog: "בלוג",
+    services: "שירותים",
+    landingPages: "דפי נחיתה",
+    customCRMs: "מערכות CRM מותאמות אישית",
+    businessAutomations: "אוטומציות עסקיות",
+    whatsAppBusiness: "וואטסאפ עסקי",
+    shopifyIntegrations: "אינטגרציות לשופיפיי",
+    customSolutions: "פתרונות טכנולוגיים מותאמים אישית לעסקים קטנים ובינוניים.",
   },
 };
 
 export default function Footer() {
-  const pathname = usePathname();
+  const pathname = usePathname() || "";
   // Determine current locale from URL path or default to 'en'
-  const locale = pathname?.startsWith("/he") ? "he" : "en";
+  const locale = pathname.startsWith("/he") ? "he" : "en";
   const t = translations[locale as keyof typeof translations];
 
+  // Build localized links
+  const getLocalizedHref = (path: string) => {
+    // Keep the current locale in the path
+    return locale === "en" ? path : `/he${path}`;
+  };
+
+  // For RTL in Hebrew
+  const rtlClass = locale === "he" ? "rtl" : "";
+
   return (
-    <footer className="bg-purple-900 text-white py-12 md:py-16">
+    <footer className={`bg-purple-900 text-white py-12 md:py-16 ${rtlClass}`}>
       <div className="container px-4 md:px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           <div>
             <h3 className="text-lg font-semibold mb-4">PurpleScript</h3>
-            <p className="text-white/70 mb-4">
-              Custom technology solutions for small and medium businesses.
-            </p>
+            <p className="text-white/70 mb-4">{t.customSolutions}</p>
             <div className="flex space-x-4">
               <Link href="#" className="text-white/70 hover:text-white">
                 <Facebook className="h-5 w-5" />
@@ -55,46 +89,52 @@ export default function Footer() {
             </div>
           </div>
           <div>
-            <h3 className="text-lg font-semibold mb-4">Services</h3>
+            <h3 className="text-lg font-semibold mb-4">{t.services}</h3>
             <ul className="space-y-2">
               <li>
                 <Link href="#" className="text-white/70 hover:text-white">
-                  Landing Pages
+                  {t.landingPages}
                 </Link>
               </li>
               <li>
                 <Link href="#" className="text-white/70 hover:text-white">
-                  Custom CRMs
+                  {t.customCRMs}
                 </Link>
               </li>
               <li>
                 <Link href="#" className="text-white/70 hover:text-white">
-                  Business Automations
+                  {t.businessAutomations}
                 </Link>
               </li>
               <li>
                 <Link href="#" className="text-white/70 hover:text-white">
-                  WhatsApp Business
+                  {t.whatsAppBusiness}
                 </Link>
               </li>
               <li>
                 <Link href="#" className="text-white/70 hover:text-white">
-                  Shopify Integrations
+                  {t.shopifyIntegrations}
                 </Link>
               </li>
             </ul>
           </div>
           <div>
-            <h3 className="text-lg font-semibold mb-4">Company</h3>
+            <h3 className="text-lg font-semibold mb-4">{t.company}</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/#about" className="text-white/70 hover:text-white">
-                  About Us
+                <Link
+                  href={getLocalizedHref("/#about")}
+                  className="text-white/70 hover:text-white"
+                >
+                  {t.aboutUs}
                 </Link>
               </li>
               <li>
-                <Link href="/blog" className="text-white/70 hover:text-white">
-                  Blog
+                <Link
+                  href={getLocalizedHref("/blog")}
+                  className="text-white/70 hover:text-white"
+                >
+                  {t.blog}
                 </Link>
               </li>
               <li>
@@ -110,18 +150,16 @@ export default function Footer() {
             </ul>
           </div>
           <div>
-            <h3 className="text-lg font-semibold mb-4">Subscribe</h3>
-            <p className="text-white/70 mb-4">
-              Stay updated with our latest news and offers.
-            </p>
+            <h3 className="text-lg font-semibold mb-4">{t.subscribe}</h3>
+            <p className="text-white/70 mb-4">{t.subscribeText}</p>
             <form className="space-y-2">
               <Input
                 type="email"
-                placeholder="Your email"
+                placeholder={t.emailPlaceholder}
                 className="bg-purple-800 border-purple-700 text-white placeholder:text-white/50"
               />
               <Button className="w-full bg-white text-purple-700 hover:bg-purple-100">
-                Subscribe
+                {t.subscribe}
               </Button>
             </form>
           </div>

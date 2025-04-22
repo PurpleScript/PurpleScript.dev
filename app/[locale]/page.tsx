@@ -19,10 +19,32 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 
-// TODO: divide the sections into components
-export default function Home() {
+// Translations for section headings and other content
+const translations = {
+  en: {
+    ourServices: "Our Services",
+    customTechnologySolutions: "Custom Technology Solutions",
+    helpBusinesses:
+      "We help small and medium businesses grow and operate more efficiently through tailored technology solutions.",
+  },
+  he: {
+    ourServices: "השירותים שלנו",
+    customTechnologySolutions: "פתרונות טכנולוגיים מותאמים אישית",
+    helpBusinesses:
+      "אנו עוזרים לעסקים קטנים ובינוניים לצמוח ולפעול ביעילות רבה יותר באמצעות פתרונות טכנולוגיים מותאמים.",
+  },
+};
+
+export default function Home({ params }: { params: { locale: string } }) {
+  const locale = params.locale || "en";
+  const t =
+    translations[locale as keyof typeof translations] || translations.en;
+
+  // Add RTL class for Hebrew
+  const rtlClass = locale === "he" ? "rtl" : "";
+
   return (
-    <main className="min-h-screen">
+    <main className={`min-h-screen ${rtlClass}`}>
       <HeroSection />
 
       {/* Services Section */}
@@ -30,14 +52,13 @@ export default function Home() {
         <div className="container px-4 md:px-6">
           <div className="text-center mb-16">
             <Badge className="mb-4 bg-purple-100 text-purple-700 hover:bg-purple-100">
-              Our Services
+              {t.ourServices}
             </Badge>
             <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">
-              Custom Technology Solutions
+              {t.customTechnologySolutions}
             </h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              We help small and medium businesses grow and operate more
-              efficiently through tailored technology solutions.
+              {t.helpBusinesses}
             </p>
           </div>
 
