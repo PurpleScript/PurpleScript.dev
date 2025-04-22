@@ -1,66 +1,47 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
+import { Facebook, Instagram, Linkedin } from "lucide-react";
 
 export default function Footer() {
   return (
     <footer className="bg-purple-900 text-white py-12 md:py-16">
       <div className="container px-4 md:px-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           <div>
             <h3 className="text-lg font-semibold mb-4">PurpleScript</h3>
             <p className="text-white/70 mb-4">
               Custom technology solutions for small and medium businesses.
             </p>
             <div className="flex space-x-4">
-              <Link href="#" className="text-white/70 hover:text-white">
+              <Link
+                href="https://www.facebook.com/PurpleScript.dev"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white/70 hover:text-white"
+              >
                 <Facebook className="h-5 w-5" />
                 <span className="sr-only">Facebook</span>
               </Link>
-              <Link href="#" className="text-white/70 hover:text-white">
-                <Twitter className="h-5 w-5" />
-                <span className="sr-only">Twitter</span>
-              </Link>
-              <Link href="#" className="text-white/70 hover:text-white">
+              <Link
+                href="https://www.instagram.com/purplescript.dev/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white/70 hover:text-white"
+              >
                 <Instagram className="h-5 w-5" />
                 <span className="sr-only">Instagram</span>
               </Link>
-              <Link href="#" className="text-white/70 hover:text-white">
+              <Link
+                href="https://www.linkedin.com/company/purplescript/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white/70 hover:text-white"
+              >
                 <Linkedin className="h-5 w-5" />
                 <span className="sr-only">LinkedIn</span>
               </Link>
             </div>
-          </div>
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Services</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link href="#" className="text-white/70 hover:text-white">
-                  Landing Pages
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="text-white/70 hover:text-white">
-                  Custom CRMs
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="text-white/70 hover:text-white">
-                  Business Automations
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="text-white/70 hover:text-white">
-                  WhatsApp Business
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="text-white/70 hover:text-white">
-                  Shopify Integrations
-                </Link>
-              </li>
-            </ul>
           </div>
           <div>
             <h3 className="text-lg font-semibold mb-4">Company</h3>

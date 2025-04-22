@@ -371,7 +371,7 @@ export default function SmartCrmPage() {
             stronger customer relationships and drive growth.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact">
+            <Link href="/#contact">
               <Button
                 size="lg"
                 className="bg-white text-purple-900 hover:bg-purple-100"

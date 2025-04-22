@@ -76,7 +76,7 @@ export default function ProductsPage() {
             tailored technology solution for your business.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact">
+            <Link href="/#contact">
               <Button className="bg-purple-700 hover:bg-purple-800">
                 Contact Us
               </Button>
