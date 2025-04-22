@@ -32,19 +32,19 @@ export default function Header() {
       <div className="container flex h-16 items-center justify-between px-4 md:px-6">
         <Link
           href="/"
-          className="flex items-center gap-2"
+          className="flex items-center gap-3"
           onClick={handleLogoClick}
         >
-          <div className="relative h-10 w-10">
+          <div className="relative h-12 w-12">
             <Image
               src="/images/logo.svg"
               alt="PurpleScript Logo"
-              width={40}
-              height={40}
+              width={48}
+              height={48}
               className="object-contain"
             />
           </div>
-          <span className="text-xl font-bold">PurpleScript</span>
+          <span className="text-2xl font-bold">PurpleScript</span>
         </Link>
         <nav className="hidden md:flex gap-6">
           <Link
