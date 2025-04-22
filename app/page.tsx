@@ -359,7 +359,7 @@ export default function Home() {
                       <div>
                         <h4 className="font-semibold">Ron Hazan</h4>
                         <p className="text-sm text-muted-foreground">
-                          Fromer CPO, All Services
+                          Fromer CBO, All Services
                         </p>
                       </div>
                     </div>
@@ -537,14 +537,22 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="bg-white rounded-lg p-6 shadow-sm">
-                  <div className="w-16 h-16 rounded-full bg-purple-100 flex items-center justify-center mb-4">
-                    <span className="text-purple-700 font-bold">RH</span>
-                  </div>
                   <div className="flex flex-col items-center text-center">
-                    <h4 className="font-semibold">Ron Hazan</h4>
+                    <div className="w-16 h-16 rounded-full bg-purple-100 flex items-center justify-center mb-4">
+                      <span className="text-purple-700 font-bold">RH</span>
+                    </div>
+                    <h4 className="font-semibold mt-2">Ron Hazan</h4>
                     <p className="text-sm text-muted-foreground">
                       CBO & Developer
                     </p>
+                    <Link
+                      href="https://www.linkedin.com/in/ron-sapsa-hazan-797366326/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-2 text-purple-700 hover:text-purple-800 transition-colors"
+                    >
+                      <Linkedin className="h-5 w-5" />
+                    </Link>
                   </div>
                 </div>
               </div>
