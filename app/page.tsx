@@ -283,7 +283,7 @@ export default function Home() {
                     Learn More
                   </Button>
                 </Link>
-                <Link href="/contact">
+                <Link href="/#contact">
                   <Button variant="outline">Contact Sales</Button>
                 </Link>
               </div>
