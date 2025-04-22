@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
@@ -17,6 +19,10 @@ import {
 } from "lucide-react";
 
 export default function SmartCrmPage() {
+  const scrollToPricing = () => {
+    document.getElementById("pricing")?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <main className="min-h-screen">
       {/* Hero Section */}
@@ -35,7 +41,7 @@ export default function SmartCrmPage() {
                 our intelligent CRM system powered by advanced AI analytics.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link href="/contact">
+                <Link href="/#contact">
                   <Button
                     size="lg"
                     className="bg-white text-purple-900 hover:bg-purple-100"
@@ -47,11 +53,7 @@ export default function SmartCrmPage() {
                   size="lg"
                   variant="outline"
                   className="border-white text-white hover:bg-purple-800"
-                  onClick={() =>
-                    document
-                      .getElementById("pricing")
-                      ?.scrollIntoView({ behavior: "smooth" })
-                  }
+                  onClick={scrollToPricing}
                 >
                   View Pricing
                 </Button>
@@ -158,7 +160,7 @@ export default function SmartCrmPage() {
                     </div>
                   </div>
 
-                  <Link href="/contact">
+                  <Link href="/#contact">
                     <Button className="w-full bg-purple-700 hover:bg-purple-800">
                       Get Started
                     </Button>
@@ -303,7 +305,7 @@ export default function SmartCrmPage() {
                   Our Smart CRM is designed for businesses of all sizes, from
                   startups to enterprises.
                 </p>
-                <Link href="/contact">
+                <Link href="/#contact">
                   <Button variant="secondary" className="w-full">
                     Get Started
                   </Button>
@@ -559,7 +561,7 @@ export default function SmartCrmPage() {
             AI-driven business intelligence.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact">
+            <Link href="/#contact">
               <Button
                 size="lg"
                 className="bg-white text-purple-900 hover:bg-purple-100"
