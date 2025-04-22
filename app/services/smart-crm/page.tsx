@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
@@ -32,7 +34,7 @@ export default function SmartCrmPage() {
                 our intelligent CRM system powered by advanced AI analytics.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link href="/contact">
+                <Link href="/#contact">
                   <Button
                     size="lg"
                     className="bg-white text-purple-900 hover:bg-purple-100"
@@ -54,14 +56,14 @@ export default function SmartCrmPage() {
                 </Button>
               </div>
             </div>
-            <div className="relative h-[300px] md:h-[400px] rounded-lg overflow-hidden">
+            <div className="relative h-[300px] md:h-[400px] rounded-lg overflow-hidden shadow-xl">
               <Image
-                src="/images/hero-bg-snow.jpg"
+                src="/images/crm-dashboard.jpg"
                 alt="Smart CRM Dashboard"
                 fill
                 className="object-cover"
               />
-              <div className="absolute inset-0 bg-purple-900/20"></div>
+              <div className="absolute inset-0 bg-purple-900/10"></div>
             </div>
           </div>
         </div>
@@ -188,7 +190,7 @@ export default function SmartCrmPage() {
                   Our Smart CRM is designed for businesses of all sizes, from
                   startups to enterprises.
                 </p>
-                <Link href="/contact">
+                <Link href="/#contact">
                   <Button variant="secondary" className="w-full">
                     Get Started
                   </Button>
