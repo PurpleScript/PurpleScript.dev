@@ -40,7 +40,7 @@ export default function ServicesPage() {
                 Beautifully designed landing pages that convert visitors into
                 customers with clear CTAs and optimized user flows.
               </p>
-              <Link href="/contact">
+              <Link href="/#contact">
                 <Button variant="outline" className="w-full">
                   Get in Touch
                 </Button>
@@ -60,7 +60,7 @@ export default function ServicesPage() {
                 Tailor-made solutions that streamline your operations and help
                 your team work more efficiently.
               </p>
-              <Link href="/contact">
+              <Link href="/#contact">
                 <Button variant="outline" className="w-full">
                   Get in Touch
                 </Button>
@@ -80,7 +80,7 @@ export default function ServicesPage() {
                 Automate repetitive tasks like invoicing and data flows to save
                 time and reduce errors.
               </p>
-              <Link href="/contact">
+              <Link href="/#contact">
                 <Button variant="outline" className="w-full">
                   Get in Touch
                 </Button>
@@ -100,7 +100,7 @@ export default function ServicesPage() {
                 Engage with your customers where they are with custom WhatsApp
                 Business integrations.
               </p>
-              <Link href="/contact">
+              <Link href="/#contact">
                 <Button variant="outline" className="w-full">
                   Get in Touch
                 </Button>
@@ -120,7 +120,7 @@ export default function ServicesPage() {
                 Enhance your e-commerce store with custom Shopify integrations
                 that boost sales and improve user experience.
               </p>
-              <Link href="/contact">
+              <Link href="/#contact">
                 <Button variant="outline" className="w-full">
                   Get in Touch
                 </Button>
@@ -190,7 +190,7 @@ export default function ServicesPage() {
               </p>
             </div>
           </div>
-          <Link href="/contact">
+          <Link href="/#contact">
             <Button className="bg-purple-700 hover:bg-purple-800">
               Start Your Project
             </Button>
