@@ -41,22 +41,17 @@ export default function SmartCrmPage() {
                 our intelligent CRM system powered by advanced AI analytics.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link href="/#contact" className="w-full sm:w-auto">
-                  <Button
-                    size="lg"
-                    className="bg-white text-purple-900 hover:bg-purple-100 w-full"
-                  >
+                <a href="/#contact" className="block w-full sm:w-auto">
+                  <button className="h-10 py-2 px-4 min-w-36 rounded-md bg-white text-purple-900 hover:bg-purple-100 w-full text-base font-medium">
                     Get Started
-                  </Button>
-                </Link>
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="border-white text-white hover:bg-purple-800 border-2"
+                  </button>
+                </a>
+                <button
+                  className="h-10 py-2 px-4 min-w-36 rounded-md border-2 border-white text-white hover:bg-purple-800 text-base font-medium"
                   onClick={scrollToPricing}
                 >
                   View Pricing
-                </Button>
+                </button>
               </div>
             </div>
             <div className="relative h-[300px] md:h-[400px] rounded-lg overflow-hidden">
@@ -562,12 +557,12 @@ export default function SmartCrmPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="/#contact" className="block w-full sm:w-auto">
-              <button className="h-12 px-8 rounded-md bg-white text-purple-900 hover:bg-purple-100 w-full text-base font-medium">
+              <button className="h-10 py-2 px-4 min-w-36 rounded-md bg-white text-purple-900 hover:bg-purple-100 w-full text-base font-medium">
                 Get Started
               </button>
             </a>
             <a href="/products" className="block w-full sm:w-auto">
-              <button className="h-12 px-8 rounded-md border-2 border-white text-white hover:bg-purple-800 w-full text-base font-medium">
+              <button className="h-10 py-2 px-4 min-w-36 rounded-md border-2 border-white text-white hover:bg-purple-800 w-full text-base font-medium">
                 Explore Other Products
               </button>
             </a>
