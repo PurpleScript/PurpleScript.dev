@@ -54,14 +54,14 @@ export default function SmartCrmPage() {
                 </button>
               </div>
             </div>
-            <div className="relative h-[300px] md:h-[400px] rounded-lg overflow-hidden">
+            <div className="relative h-[300px] md:h-[400px] rounded-lg overflow-hidden shadow-xl">
               <Image
-                src="/images/hero-bg-snow.jpg"
+                src="/images/crm-dashboard.jpg"
                 alt="Smart CRM Dashboard"
                 fill
                 className="object-cover"
               />
-              <div className="absolute inset-0 bg-purple-900/20"></div>
+              <div className="absolute inset-0 bg-purple-900/10"></div>
             </div>
           </div>
         </div>
