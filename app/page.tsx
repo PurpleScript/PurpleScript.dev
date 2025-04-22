@@ -141,8 +141,90 @@ export default function Home() {
         </div>
       </section>
 
+      {/* How It Works Section */}
+      <section className="py-20 bg-purple-50" id="process">
+        <div className="container px-4 md:px-6">
+          <div className="text-center mb-16">
+            <Badge className="mb-4 bg-purple-100 text-purple-700 hover:bg-purple-100">
+              Our Process
+            </Badge>
+            <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">
+              How We Work
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+              Our streamlined process ensures we deliver high-quality solutions
+              that meet your specific needs.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="relative">
+              <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-8 h-8 rounded-full bg-purple-700 text-white flex items-center justify-center font-bold">
+                1
+              </div>
+              <Card className="mt-12 border-purple-100 h-full">
+                <CardContent className="p-6 flex flex-col items-center text-center">
+                  <h3 className="text-xl font-semibold mb-2">Discovery</h3>
+                  <p className="text-muted-foreground">
+                    We start by understanding your business, goals, and
+                    challenges to identify the right solutions.
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+
+            <div className="relative">
+              <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-8 h-8 rounded-full bg-purple-700 text-white flex items-center justify-center font-bold">
+                2
+              </div>
+              <Card className="mt-12 border-purple-100 h-full">
+                <CardContent className="p-6 flex flex-col items-center text-center">
+                  <h3 className="text-xl font-semibold mb-2">Strategy</h3>
+                  <p className="text-muted-foreground">
+                    We develop a tailored strategy and roadmap to achieve your
+                    business objectives.
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+
+            <div className="relative">
+              <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-8 h-8 rounded-full bg-purple-700 text-white flex items-center justify-center font-bold">
+                3
+              </div>
+              <Card className="mt-12 border-purple-100 h-full">
+                <CardContent className="p-6 flex flex-col items-center text-center">
+                  <h3 className="text-xl font-semibold mb-2">Development</h3>
+                  <p className="text-muted-foreground">
+                    Our team builds your solution with regular updates and
+                    feedback sessions.
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+
+            <div className="relative">
+              <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-8 h-8 rounded-full bg-purple-700 text-white flex items-center justify-center font-bold">
+                4
+              </div>
+              <Card className="mt-12 border-purple-100 h-full">
+                <CardContent className="p-6 flex flex-col items-center text-center">
+                  <h3 className="text-xl font-semibold mb-2">
+                    Launch & Support
+                  </h3>
+                  <p className="text-muted-foreground">
+                    We deploy your solution and provide ongoing support to
+                    ensure long-term success.
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Products Section */}
-      <section className="py-20 bg-purple-50" id="products">
+      <section className="py-20 bg-white" id="products">
         <div className="container px-4 md:px-6">
           <div className="text-center mb-16">
             <Badge className="mb-4 bg-purple-100 text-purple-700 hover:bg-purple-100">
@@ -223,88 +305,6 @@ export default function Home() {
                 View All Products
               </Button>
             </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* How It Works Section */}
-      <section className="py-20 bg-purple-50" id="process">
-        <div className="container px-4 md:px-6">
-          <div className="text-center mb-16">
-            <Badge className="mb-4 bg-purple-100 text-purple-700 hover:bg-purple-100">
-              Our Process
-            </Badge>
-            <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">
-              How We Work
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Our streamlined process ensures we deliver high-quality solutions
-              that meet your specific needs.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="relative">
-              <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-8 h-8 rounded-full bg-purple-700 text-white flex items-center justify-center font-bold">
-                1
-              </div>
-              <Card className="mt-12 border-purple-100 h-full">
-                <CardContent className="p-6 flex flex-col items-center text-center">
-                  <h3 className="text-xl font-semibold mb-2">Discovery</h3>
-                  <p className="text-muted-foreground">
-                    We start by understanding your business, goals, and
-                    challenges to identify the right solutions.
-                  </p>
-                </CardContent>
-              </Card>
-            </div>
-
-            <div className="relative">
-              <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-8 h-8 rounded-full bg-purple-700 text-white flex items-center justify-center font-bold">
-                2
-              </div>
-              <Card className="mt-12 border-purple-100 h-full">
-                <CardContent className="p-6 flex flex-col items-center text-center">
-                  <h3 className="text-xl font-semibold mb-2">Strategy</h3>
-                  <p className="text-muted-foreground">
-                    We develop a tailored strategy and roadmap to achieve your
-                    business objectives.
-                  </p>
-                </CardContent>
-              </Card>
-            </div>
-
-            <div className="relative">
-              <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-8 h-8 rounded-full bg-purple-700 text-white flex items-center justify-center font-bold">
-                3
-              </div>
-              <Card className="mt-12 border-purple-100 h-full">
-                <CardContent className="p-6 flex flex-col items-center text-center">
-                  <h3 className="text-xl font-semibold mb-2">Development</h3>
-                  <p className="text-muted-foreground">
-                    Our team builds your solution with regular updates and
-                    feedback sessions.
-                  </p>
-                </CardContent>
-              </Card>
-            </div>
-
-            <div className="relative">
-              <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-8 h-8 rounded-full bg-purple-700 text-white flex items-center justify-center font-bold">
-                4
-              </div>
-              <Card className="mt-12 border-purple-100 h-full">
-                <CardContent className="p-6 flex flex-col items-center text-center">
-                  <h3 className="text-xl font-semibold mb-2">
-                    Launch & Support
-                  </h3>
-                  <p className="text-muted-foreground">
-                    We deploy your solution and provide ongoing support to
-                    ensure long-term success.
-                  </p>
-                </CardContent>
-              </Card>
-            </div>
           </div>
         </div>
       </section>
