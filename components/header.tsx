@@ -29,22 +29,22 @@ export default function Header() {
 
   return (
     <header className="fixed top-0 w-full z-50 bg-purple-650 text-white">
-      <div className="container flex h-16 items-center justify-between px-4 md:px-6">
+      <div className="container flex h-20 items-center justify-between px-4 md:px-6">
         <Link
           href="/"
           className="flex items-center gap-3"
           onClick={handleLogoClick}
         >
-          <div className="relative h-12 w-12">
+          <div className="relative h-14 w-14">
             <Image
               src="/images/logo.svg"
               alt="PurpleScript Logo"
-              width={48}
-              height={48}
+              width={56}
+              height={56}
               className="object-contain"
             />
           </div>
-          <span className="text-2xl font-bold">PurpleScript</span>
+          <span className="text-3xl font-bold">PurpleScript</span>
         </Link>
         <nav className="hidden md:flex gap-6">
           <Link
