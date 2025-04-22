@@ -16,6 +16,9 @@ import {
   ShoppingBag,
   Zap,
   Linkedin,
+  BrainCircuit,
+  Users,
+  LineChart,
 } from "lucide-react";
 import Link from "next/link";
 
@@ -127,8 +130,99 @@ export default function Home() {
                   your business grow.
                 </p>
               </div>
-              <ScrollToContactButton />
+              <div className="flex gap-4">
+                <ScrollToContactButton />
+                <Link href="/services">
+                  <Button variant="secondary">View All Services</Button>
+                </Link>
+              </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Products Section */}
+      <section className="py-20 bg-purple-50" id="products">
+        <div className="container px-4 md:px-6">
+          <div className="text-center mb-16">
+            <Badge className="mb-4 bg-purple-100 text-purple-700 hover:bg-purple-100">
+              Our Products
+            </Badge>
+            <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">
+              Ready-to-Use Technology Solutions
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+              Discover our range of ready-made products designed to solve
+              specific business challenges.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+            <div>
+              <Badge variant="outline" className="mb-2">
+                Featured Product
+              </Badge>
+              <h3 className="text-2xl font-bold mb-4">
+                Smart CRM with AI Analytics
+              </h3>
+              <p className="text-muted-foreground mb-6">
+                Transform your customer relationships and business insights with
+                our intelligent CRM system powered by advanced AI analytics. Get
+                a complete view of your customers, predict trends, and make
+                data-driven decisions.
+              </p>
+              <div className="flex items-center gap-4 mb-6">
+                <div className="rounded-full bg-purple-100 w-10 h-10 flex items-center justify-center">
+                  <BrainCircuit className="h-5 w-5 text-purple-700" />
+                </div>
+                <span>AI-powered business intelligence</span>
+              </div>
+              <div className="flex items-center gap-4 mb-6">
+                <div className="rounded-full bg-purple-100 w-10 h-10 flex items-center justify-center">
+                  <Users className="h-5 w-5 text-purple-700" />
+                </div>
+                <span>Complete 360° customer view</span>
+              </div>
+              <div className="flex items-center gap-4 mb-8">
+                <div className="rounded-full bg-purple-100 w-10 h-10 flex items-center justify-center">
+                  <LineChart className="h-5 w-5 text-purple-700" />
+                </div>
+                <span>Predictive sales analytics</span>
+              </div>
+              <div className="flex items-baseline gap-4 mb-8">
+                <span className="text-3xl font-bold text-purple-700">
+                  ₪3,490
+                </span>
+                <span className="text-muted-foreground">One-time payment</span>
+              </div>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link href="/products/smart-crm">
+                  <Button className="bg-purple-700 hover:bg-purple-800">
+                    Learn More
+                  </Button>
+                </Link>
+                <Link href="/contact">
+                  <Button variant="outline">Contact Sales</Button>
+                </Link>
+              </div>
+            </div>
+            <div className="relative h-[300px] md:h-[400px] rounded-lg overflow-hidden">
+              <Image
+                src="/images/hero-bg-snow.jpg"
+                alt="Smart CRM Dashboard"
+                fill
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-purple-900/10"></div>
+            </div>
+          </div>
+
+          <div className="mt-12 text-center">
+            <Link href="/products">
+              <Button variant="outline" size="lg">
+                View All Products
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
