@@ -14,15 +14,30 @@ export default function Footer() {
               Custom technology solutions for small and medium businesses.
             </p>
             <div className="flex space-x-4">
-              <Link href="#" className="text-white/70 hover:text-white">
+              <Link
+                href="https://www.facebook.com/PurpleScript.dev"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white/70 hover:text-white"
+              >
                 <Facebook className="h-5 w-5" />
                 <span className="sr-only">Facebook</span>
               </Link>
-              <Link href="#" className="text-white/70 hover:text-white">
+              <Link
+                href="https://www.instagram.com/purplescript.dev/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white/70 hover:text-white"
+              >
                 <Instagram className="h-5 w-5" />
                 <span className="sr-only">Instagram</span>
               </Link>
-              <Link href="#" className="text-white/70 hover:text-white">
+              <Link
+                href="https://www.linkedin.com/company/purplescript/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white/70 hover:text-white"
+              >
                 <Linkedin className="h-5 w-5" />
                 <span className="sr-only">LinkedIn</span>
               </Link>
