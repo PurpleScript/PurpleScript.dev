@@ -1,37 +1,19 @@
 import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 
-// Configure email transporter
+// Configure nodemailer with a more reliable configuration
 const transporter = nodemailer.createTransport({
-  service: "gmail",
+  host: "smtp.gmail.com",
+  port: 587,
+  secure: false, // true for 465, false for other ports
   auth: {
     user: process.env.EMAIL_USER,
     pass: process.env.EMAIL_PASSWORD,
   },
+  tls: {
+    rejectUnauthorized: false, // Helps with development environments
+  },
 });
-
-// Email sending function
-async function sendEmail({
-  to,
-  subject,
-  text,
-  html,
-}: {
-  to: string;
-  subject: string;
-  text: string;
-  html?: string;
-}) {
-  const mailOptions = {
-    from: process.env.EMAIL_USER,
-    to,
-    subject,
-    text,
-    html,
-  };
-
-  return transporter.sendMail(mailOptions);
-}
 
 export async function POST(request: Request) {
   try {
@@ -69,23 +51,38 @@ export async function POST(request: Request) {
       <p>${message.replace(/\n/g, "<br>")}</p>
     `;
 
-    // Send the email
-    await sendEmail({
-      to: process.env.CONTACT_EMAIL || "contact@purplescript.dev",
-      subject: `New Contact Form Submission from ${name}`,
-      text: emailText,
-      html: emailHtml,
-    });
+    try {
+      // Send the email
+      await transporter.sendMail({
+        from: process.env.EMAIL_USER,
+        to: process.env.CONTACT_EMAIL || "contact@purplescript.dev",
+        subject: `New Contact Form Submission from ${name}`,
+        text: emailText,
+        html: emailHtml,
+        replyTo: email,
+      });
 
-    // Return success response
-    return NextResponse.json(
-      { message: "Your message has been sent successfully!" },
-      { status: 200 }
-    );
+      // Return success response
+      return NextResponse.json(
+        { message: "Your message has been sent successfully!" },
+        { status: 200 }
+      );
+    } catch (emailError) {
+      console.error("Error sending email:", emailError);
+
+      // Return a user-friendly error message
+      return NextResponse.json(
+        {
+          error:
+            "Failed to send email. Please try again later or contact us directly.",
+        },
+        { status: 500 }
+      );
+    }
   } catch (error) {
     console.error("Error in contact form submission:", error);
     return NextResponse.json(
-      { error: "An error occurred while sending your message" },
+      { error: "An error occurred while processing your request" },
       { status: 500 }
     );
   }
