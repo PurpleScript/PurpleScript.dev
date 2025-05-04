@@ -636,7 +636,7 @@ export default function Home() {
                     <div className="w-16 h-16 rounded-full bg-purple-100 flex items-center justify-center mb-4">
                       <span className="text-purple-700 font-bold">RH</span>
                     </div>
-                    <h4 className="font-semibold mt-2">Ron Hazan</h4>
+                    <h4 className="font-semibold mt-2">Ron Shapsa Hazan</h4>
                     <p className="text-sm text-muted-foreground">
                       CBO & Developer
                     </p>
