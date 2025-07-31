@@ -111,6 +111,12 @@ export default function Header() {
                   Products
                 </Link>
                 <Link
+                  href="/academy"
+                  className="text-lg font-medium hover:text-white/80"
+                >
+                  Academy
+                </Link>
+                <Link
                   href="/#about"
                   className="text-lg font-medium hover:text-white/80"
                 >
