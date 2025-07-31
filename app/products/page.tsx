@@ -23,14 +23,14 @@ export default function ProductsPage() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <Card className="border-purple-100 hover:shadow-lg transition-shadow">
-            <CardContent className="p-6">
+            <CardContent className="p-6 flex flex-col h-full">
               <div className="rounded-full bg-purple-100 w-12 h-12 flex items-center justify-center mb-4">
                 <BrainCircuit className="h-6 w-6 text-purple-700" />
               </div>
               <h3 className="text-xl font-semibold mb-2">
                 Smart CRM with AI Analytics
               </h3>
-              <p className="text-muted-foreground mb-4">
+              <p className="text-muted-foreground mb-4 flex-grow">
                 Intelligent customer relationship management with AI-powered
                 business data analysis.
               </p>
@@ -54,14 +54,14 @@ export default function ProductsPage() {
           </Card>
 
           <Card className="border-purple-100 hover:shadow-lg transition-shadow">
-            <CardContent className="p-6">
+            <CardContent className="p-6 flex flex-col h-full">
               <div className="rounded-full bg-purple-100 w-12 h-12 flex items-center justify-center mb-4">
                 <CreditCard className="h-6 w-6 text-purple-700" />
               </div>
               <h3 className="text-xl font-semibold mb-2">
                 AI Booking System
               </h3>
-              <p className="text-muted-foreground mb-4">
+              <p className="text-muted-foreground mb-4 flex-grow">
                 Custom booking system with smart AI agents for medical clinics and businesses. Seamlessly integrates with any website.
               </p>
               <div className="flex justify-between items-center mb-4">
@@ -83,8 +83,8 @@ export default function ProductsPage() {
             </CardContent>
           </Card>
 
-          <Card className="border-dashed border-2 border-gray-200 bg-gray-50">
-            <CardContent className="p-6 flex flex-col items-center justify-center h-full text-gray-400">
+          <Card className="border-dashed border-2 border-gray-200 bg-gray-50 flex">
+            <CardContent className="p-6 flex flex-col items-center justify-center h-full w-full text-gray-400">
               <p className="text-center">More products coming soon</p>
             </CardContent>
           </Card>
