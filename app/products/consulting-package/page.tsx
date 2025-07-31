@@ -23,10 +23,10 @@ export default function ConsultingPackagePage() {
             Consulting Package
           </Badge>
           <h1 className="text-3xl md:text-5xl font-bold tracking-tight mb-4">
-            10-Hour Expert Technology Consulting
+            8-Hour Expert Technology Consulting
           </h1>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            Get 10 hours of personalized guidance from our experienced team to optimize your technology strategy, 
+            Get 8 hours of personalized guidance from our experienced team to optimize your technology strategy, 
             system architecture, and business processes.
           </p>
         </div>
