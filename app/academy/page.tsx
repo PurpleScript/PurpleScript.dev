@@ -281,7 +281,7 @@ export default function AcademyPage() {
               <Button
                 size="lg"
                 variant="outline"
-                className="border-white text-white hover:bg-purple-800"
+                className="border-white text-white hover:bg-purple-800 hover:text-white"
               >
                 Explore Courses
               </Button>
