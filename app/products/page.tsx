@@ -89,10 +89,10 @@ export default function ProductsPage() {
                 <MessageCircle className="h-6 w-6 text-purple-700" />
               </div>
               <h3 className="text-xl font-semibold mb-2">
-                Consulting Package
+                10-Hour Consulting Package
               </h3>
               <p className="text-muted-foreground mb-4 flex-grow">
-                Expert consulting hours for technology strategy, system architecture, and business optimization. Get personalized guidance from our experienced team.
+                10 hours of expert consulting for technology strategy, system architecture, and business optimization. Get personalized guidance from our experienced team.
               </p>
               <div className="flex justify-between items-center mb-4">
                 <span className="text-lg font-bold text-purple-700">

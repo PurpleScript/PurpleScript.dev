@@ -23,10 +23,10 @@ export default function ConsultingPackagePage() {
             Consulting Package
           </Badge>
           <h1 className="text-3xl md:text-5xl font-bold tracking-tight mb-4">
-            Expert Technology Consulting
+            10-Hour Expert Technology Consulting
           </h1>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            Get personalized guidance from our experienced team to optimize your technology strategy, 
+            Get 10 hours of personalized guidance from our experienced team to optimize your technology strategy, 
             system architecture, and business processes.
           </p>
         </div>
@@ -41,7 +41,7 @@ export default function ConsultingPackagePage() {
               <div className="flex items-start gap-3">
                 <CheckCircle className="h-5 w-5 text-green-500 mt-0.5" />
                 <div>
-                  <h4 className="font-semibold">Dedicated Consulting Hours</h4>
+                  <h4 className="font-semibold">10 Dedicated Consulting Hours</h4>
                   <p className="text-muted-foreground">Direct access to our technology experts for strategic guidance</p>
                 </div>
               </div>
@@ -73,9 +73,9 @@ export default function ConsultingPackagePage() {
             <Card className="border-purple-100">
               <CardContent className="p-6">
                 <div className="text-center mb-6">
-                  <h3 className="text-2xl font-bold mb-2">Consulting Package</h3>
+                  <h3 className="text-2xl font-bold mb-2">10-Hour Consulting Package</h3>
                   <div className="text-3xl font-bold text-purple-700 mb-2">₪2,990</div>
-                  <Badge variant="outline" className="mb-4">Expert Guidance</Badge>
+                  <Badge variant="outline" className="mb-4">10 Hours Expert Guidance</Badge>
                 </div>
                 
                 <div className="space-y-3 mb-6">
