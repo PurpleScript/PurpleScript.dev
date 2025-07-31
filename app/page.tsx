@@ -248,60 +248,19 @@ export default function Home() {
             </p>
           </div>
 
-          <Carousel className="w-full max-w-6xl mx-auto">
-            <CarouselContent>
+          <div className="w-full max-w-6xl mx-auto">
+            {/* Mobile: Stack layout */}
+            <div className="block md:hidden space-y-8">
               {/* Smart CRM Product */}
-              <CarouselItem>
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center p-4">
-                  <div>
-                    <Badge variant="outline" className="mb-2">
-                      Featured Product
-                    </Badge>
-                    <h3 className="text-2xl font-bold mb-4">
-                      Smart CRM with AI Analytics
-                    </h3>
-                    <p className="text-muted-foreground mb-6">
-                      Transform your customer relationships and business insights with
-                      our intelligent CRM system powered by advanced AI analytics. Get
-                      a complete view of your customers, predict trends, and make
-                      data-driven decisions.
-                    </p>
-                    <div className="flex items-center gap-4 mb-6">
-                      <div className="rounded-full bg-purple-100 w-10 h-10 flex items-center justify-center">
-                        <BrainCircuit className="h-5 w-5 text-purple-700" />
-                      </div>
-                      <span>AI-powered business intelligence</span>
-                    </div>
-                    <div className="flex items-center gap-4 mb-6">
-                      <div className="rounded-full bg-purple-100 w-10 h-10 flex items-center justify-center">
-                        <Users className="h-5 w-5 text-purple-700" />
-                      </div>
-                      <span>Complete 360° customer view</span>
-                    </div>
-                    <div className="flex items-center gap-4 mb-8">
-                      <div className="rounded-full bg-purple-100 w-10 h-10 flex items-center justify-center">
-                        <LineChart className="h-5 w-5 text-purple-700" />
-                      </div>
-                      <span>Predictive sales analytics</span>
-                    </div>
-                    <div className="flex items-baseline gap-4 mb-8">
-                      <span className="text-3xl font-bold text-purple-700">
-                        ₪3,490
-                      </span>
-                      <span className="text-muted-foreground">One-time payment</span>
-                    </div>
-                    <div className="flex flex-col sm:flex-row gap-4">
-                      <Link href="/products/smart-crm">
-                        <Button className="bg-purple-700 hover:bg-purple-800">
-                          Learn More
-                        </Button>
-                      </Link>
-                      <Link href="/#contact">
-                        <Button variant="outline">Contact Sales</Button>
-                      </Link>
-                    </div>
-                  </div>
-                  <div className="relative h-[300px] md:h-[400px] rounded-lg overflow-hidden">
+              <Card className="border-purple-100">
+                <CardContent className="p-6">
+                  <Badge variant="outline" className="mb-2">
+                    Featured Product
+                  </Badge>
+                  <h3 className="text-xl font-bold mb-4">
+                    Smart CRM with AI Analytics
+                  </h3>
+                  <div className="relative h-[200px] rounded-lg overflow-hidden mb-4">
                     <Image
                       src="/images/crm-dashboard.jpg"
                       alt="Smart CRM Dashboard"
@@ -310,134 +269,364 @@ export default function Home() {
                     />
                     <div className="absolute inset-0 bg-purple-900/10"></div>
                   </div>
-                </div>
-              </CarouselItem>
+                  <p className="text-muted-foreground mb-4 text-sm">
+                    Transform your customer relationships and business insights with
+                    our intelligent CRM system powered by advanced AI analytics.
+                  </p>
+                  <div className="space-y-3 mb-6">
+                    <div className="flex items-center gap-3">
+                      <div className="rounded-full bg-purple-100 w-8 h-8 flex items-center justify-center">
+                        <BrainCircuit className="h-4 w-4 text-purple-700" />
+                      </div>
+                      <span className="text-sm">AI-powered business intelligence</span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <div className="rounded-full bg-purple-100 w-8 h-8 flex items-center justify-center">
+                        <Users className="h-4 w-4 text-purple-700" />
+                      </div>
+                      <span className="text-sm">Complete 360° customer view</span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <div className="rounded-full bg-purple-100 w-8 h-8 flex items-center justify-center">
+                        <LineChart className="h-4 w-4 text-purple-700" />
+                      </div>
+                      <span className="text-sm">Predictive sales analytics</span>
+                    </div>
+                  </div>
+                  <div className="flex items-baseline gap-4 mb-6">
+                    <span className="text-2xl font-bold text-purple-700">
+                      ₪3,490
+                    </span>
+                    <span className="text-muted-foreground text-sm">One-time payment</span>
+                  </div>
+                  <div className="flex flex-col gap-3">
+                    <Link href="/products/smart-crm" className="w-full">
+                      <Button className="bg-purple-700 hover:bg-purple-800 w-full">
+                        Learn More
+                      </Button>
+                    </Link>
+                    <Link href="/#contact" className="w-full">
+                      <Button variant="outline" className="w-full">Contact Sales</Button>
+                    </Link>
+                  </div>
+                </CardContent>
+              </Card>
 
               {/* AI Booking System Product */}
-              <CarouselItem>
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center p-4">
-                  <div>
-                    <Badge variant="outline" className="mb-2">
-                      AI-Powered
-                    </Badge>
-                    <h3 className="text-2xl font-bold mb-4">
-                      AI Booking System
-                    </h3>
-                    <p className="text-muted-foreground mb-6">
-                      Custom booking system with smart AI agents for medical clinics and businesses. 
-                      Seamlessly integrates with any website and automates appointment scheduling 
-                      with intelligent conversation handling.
-                    </p>
-                    <div className="flex items-center gap-4 mb-6">
-                      <div className="rounded-full bg-purple-100 w-10 h-10 flex items-center justify-center">
-                        <MessageCircle className="h-5 w-5 text-purple-700" />
-                      </div>
-                      <span>Smart AI conversation agents</span>
-                    </div>
-                    <div className="flex items-center gap-4 mb-6">
-                      <div className="rounded-full bg-purple-100 w-10 h-10 flex items-center justify-center">
-                        <Calendar className="h-5 w-5 text-purple-700" />
-                      </div>
-                      <span>Automated appointment scheduling</span>
-                    </div>
-                    <div className="flex items-center gap-4 mb-8">
-                      <div className="rounded-full bg-purple-100 w-10 h-10 flex items-center justify-center">
-                        <Code className="h-5 w-5 text-purple-700" />
-                      </div>
-                      <span>Easy website integration</span>
-                    </div>
-                    <div className="flex items-baseline gap-4 mb-8">
-                      <span className="text-3xl font-bold text-purple-700">
-                        ₪4,890
-                      </span>
-                      <span className="text-muted-foreground">One-time payment</span>
-                    </div>
-                    <div className="flex flex-col sm:flex-row gap-4">
-                      <Link href="/products/ai-booking-system">
-                        <Button className="bg-purple-700 hover:bg-purple-800">
-                          Learn More
-                        </Button>
-                      </Link>
-                      <Link href="/#contact">
-                        <Button variant="outline">Contact Sales</Button>
-                      </Link>
-                    </div>
-                  </div>
-                  <div className="relative h-[300px] md:h-[400px] rounded-lg overflow-hidden bg-gradient-to-br from-purple-100 to-purple-200 flex items-center justify-center">
+              <Card className="border-purple-100">
+                <CardContent className="p-6">
+                  <Badge variant="outline" className="mb-2">
+                    AI-Powered
+                  </Badge>
+                  <h3 className="text-xl font-bold mb-4">
+                    AI Booking System
+                  </h3>
+                  <div className="relative h-[200px] rounded-lg overflow-hidden bg-gradient-to-br from-purple-100 to-purple-200 flex items-center justify-center mb-4">
                     <div className="text-center">
-                      <div className="rounded-full bg-purple-700 w-20 h-20 flex items-center justify-center mx-auto mb-4">
-                        <MessageCircle className="h-10 w-10 text-white" />
+                      <div className="rounded-full bg-purple-700 w-16 h-16 flex items-center justify-center mx-auto mb-2">
+                        <MessageCircle className="h-8 w-8 text-white" />
                       </div>
-                      <p className="text-purple-700 font-semibold">AI Booking Interface</p>
+                      <p className="text-purple-700 font-semibold text-sm">AI Booking Interface</p>
                     </div>
                   </div>
-                </div>
-              </CarouselItem>
+                  <p className="text-muted-foreground mb-4 text-sm">
+                    Custom booking system with smart AI agents for medical clinics and businesses. 
+                    Seamlessly integrates with any website and automates appointment scheduling.
+                  </p>
+                  <div className="space-y-3 mb-6">
+                    <div className="flex items-center gap-3">
+                      <div className="rounded-full bg-purple-100 w-8 h-8 flex items-center justify-center">
+                        <MessageCircle className="h-4 w-4 text-purple-700" />
+                      </div>
+                      <span className="text-sm">Smart AI conversation agents</span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <div className="rounded-full bg-purple-100 w-8 h-8 flex items-center justify-center">
+                        <Calendar className="h-4 w-4 text-purple-700" />
+                      </div>
+                      <span className="text-sm">Automated appointment scheduling</span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <div className="rounded-full bg-purple-100 w-8 h-8 flex items-center justify-center">
+                        <Code className="h-4 w-4 text-purple-700" />
+                      </div>
+                      <span className="text-sm">Easy website integration</span>
+                    </div>
+                  </div>
+                  <div className="flex items-baseline gap-4 mb-6">
+                    <span className="text-2xl font-bold text-purple-700">
+                      ₪4,890
+                    </span>
+                    <span className="text-muted-foreground text-sm">One-time payment</span>
+                  </div>
+                  <div className="flex flex-col gap-3">
+                    <Link href="/products/ai-booking-system" className="w-full">
+                      <Button className="bg-purple-700 hover:bg-purple-800 w-full">
+                        Learn More
+                      </Button>
+                    </Link>
+                    <Link href="/#contact" className="w-full">
+                      <Button variant="outline" className="w-full">Contact Sales</Button>
+                    </Link>
+                  </div>
+                </CardContent>
+              </Card>
 
               {/* Consulting Package Product */}
-              <CarouselItem>
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center p-4">
-                  <div>
-                    <Badge variant="outline" className="mb-2">
-                      Expert Guidance
-                    </Badge>
-                    <h3 className="text-2xl font-bold mb-4">
-                      8-Hour Consulting Package
-                    </h3>
-                    <p className="text-muted-foreground mb-6">
-                      8 hours of expert consulting for technology strategy, system architecture, 
-                      and business optimization. Get personalized guidance from our experienced 
-                      team to solve complex challenges and accelerate your growth.
-                    </p>
-                    <div className="flex items-center gap-4 mb-6">
-                      <div className="rounded-full bg-purple-100 w-10 h-10 flex items-center justify-center">
-                        <Users className="h-5 w-5 text-purple-700" />
-                      </div>
-                      <span>Personalized expert guidance</span>
-                    </div>
-                    <div className="flex items-center gap-4 mb-6">
-                      <div className="rounded-full bg-purple-100 w-10 h-10 flex items-center justify-center">
-                        <Zap className="h-5 w-5 text-purple-700" />
-                      </div>
-                      <span>Technology strategy optimization</span>
-                    </div>
-                    <div className="flex items-center gap-4 mb-8">
-                      <div className="rounded-full bg-purple-100 w-10 h-10 flex items-center justify-center">
-                        <LayoutDashboard className="h-5 w-5 text-purple-700" />
-                      </div>
-                      <span>System architecture review</span>
-                    </div>
-                    <div className="flex items-baseline gap-4 mb-8">
-                      <span className="text-3xl font-bold text-purple-700">
-                        ₪2,990
-                      </span>
-                      <span className="text-muted-foreground">8 hours included</span>
-                    </div>
-                    <div className="flex flex-col sm:flex-row gap-4">
-                      <Link href="/products/consulting-package">
-                        <Button className="bg-purple-700 hover:bg-purple-800">
-                          Learn More
-                        </Button>
-                      </Link>
-                      <Link href="/#contact">
-                        <Button variant="outline">Schedule Consultation</Button>
-                      </Link>
-                    </div>
-                  </div>
-                  <div className="relative h-[300px] md:h-[400px] rounded-lg overflow-hidden bg-gradient-to-br from-purple-100 to-purple-200 flex items-center justify-center">
+              <Card className="border-purple-100">
+                <CardContent className="p-6">
+                  <Badge variant="outline" className="mb-2">
+                    Expert Guidance
+                  </Badge>
+                  <h3 className="text-xl font-bold mb-4">
+                    8-Hour Consulting Package
+                  </h3>
+                  <div className="relative h-[200px] rounded-lg overflow-hidden bg-gradient-to-br from-purple-100 to-purple-200 flex items-center justify-center mb-4">
                     <div className="text-center">
-                      <div className="rounded-full bg-purple-700 w-20 h-20 flex items-center justify-center mx-auto mb-4">
-                        <Users className="h-10 w-10 text-white" />
+                      <div className="rounded-full bg-purple-700 w-16 h-16 flex items-center justify-center mx-auto mb-2">
+                        <Users className="h-8 w-8 text-white" />
                       </div>
-                      <p className="text-purple-700 font-semibold">Expert Consulting</p>
+                      <p className="text-purple-700 font-semibold text-sm">Expert Consulting</p>
                     </div>
                   </div>
-                </div>
-              </CarouselItem>
-            </CarouselContent>
-            <CarouselPrevious />
-            <CarouselNext />
-          </Carousel>
+                  <p className="text-muted-foreground mb-4 text-sm">
+                    8 hours of expert consulting for technology strategy, system architecture, 
+                    and business optimization. Get personalized guidance from our experienced team.
+                  </p>
+                  <div className="space-y-3 mb-6">
+                    <div className="flex items-center gap-3">
+                      <div className="rounded-full bg-purple-100 w-8 h-8 flex items-center justify-center">
+                        <Users className="h-4 w-4 text-purple-700" />
+                      </div>
+                      <span className="text-sm">Personalized expert guidance</span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <div className="rounded-full bg-purple-100 w-8 h-8 flex items-center justify-center">
+                        <Zap className="h-4 w-4 text-purple-700" />
+                      </div>
+                      <span className="text-sm">Technology strategy optimization</span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <div className="rounded-full bg-purple-100 w-8 h-8 flex items-center justify-center">
+                        <LayoutDashboard className="h-4 w-4 text-purple-700" />
+                      </div>
+                      <span className="text-sm">System architecture review</span>
+                    </div>
+                  </div>
+                  <div className="flex items-baseline gap-4 mb-6">
+                    <span className="text-2xl font-bold text-purple-700">
+                      ₪2,990
+                    </span>
+                    <span className="text-muted-foreground text-sm">8 hours included</span>
+                  </div>
+                  <div className="flex flex-col gap-3">
+                    <Link href="/products/consulting-package" className="w-full">
+                      <Button className="bg-purple-700 hover:bg-purple-800 w-full">
+                        Learn More
+                      </Button>
+                    </Link>
+                    <Link href="/#contact" className="w-full">
+                      <Button variant="outline" className="w-full">Schedule Consultation</Button>
+                    </Link>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+
+            {/* Desktop: Carousel layout */}
+            <div className="hidden md:block">
+              <Carousel className="w-full">
+                <CarouselContent>
+                  {/* Smart CRM Product */}
+                  <CarouselItem>
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center p-4">
+                      <div>
+                        <Badge variant="outline" className="mb-2">
+                          Featured Product
+                        </Badge>
+                        <h3 className="text-2xl font-bold mb-4">
+                          Smart CRM with AI Analytics
+                        </h3>
+                        <p className="text-muted-foreground mb-6">
+                          Transform your customer relationships and business insights with
+                          our intelligent CRM system powered by advanced AI analytics. Get
+                          a complete view of your customers, predict trends, and make
+                          data-driven decisions.
+                        </p>
+                        <div className="flex items-center gap-4 mb-6">
+                          <div className="rounded-full bg-purple-100 w-10 h-10 flex items-center justify-center">
+                            <BrainCircuit className="h-5 w-5 text-purple-700" />
+                          </div>
+                          <span>AI-powered business intelligence</span>
+                        </div>
+                        <div className="flex items-center gap-4 mb-6">
+                          <div className="rounded-full bg-purple-100 w-10 h-10 flex items-center justify-center">
+                            <Users className="h-5 w-5 text-purple-700" />
+                          </div>
+                          <span>Complete 360° customer view</span>
+                        </div>
+                        <div className="flex items-center gap-4 mb-8">
+                          <div className="rounded-full bg-purple-100 w-10 h-10 flex items-center justify-center">
+                            <LineChart className="h-5 w-5 text-purple-700" />
+                          </div>
+                          <span>Predictive sales analytics</span>
+                        </div>
+                        <div className="flex items-baseline gap-4 mb-8">
+                          <span className="text-3xl font-bold text-purple-700">
+                            ₪3,490
+                          </span>
+                          <span className="text-muted-foreground">One-time payment</span>
+                        </div>
+                        <div className="flex flex-col sm:flex-row gap-4">
+                          <Link href="/products/smart-crm">
+                            <Button className="bg-purple-700 hover:bg-purple-800">
+                              Learn More
+                            </Button>
+                          </Link>
+                          <Link href="/#contact">
+                            <Button variant="outline">Contact Sales</Button>
+                          </Link>
+                        </div>
+                      </div>
+                      <div className="relative h-[300px] md:h-[400px] rounded-lg overflow-hidden">
+                        <Image
+                          src="/images/crm-dashboard.jpg"
+                          alt="Smart CRM Dashboard"
+                          fill
+                          className="object-cover"
+                        />
+                        <div className="absolute inset-0 bg-purple-900/10"></div>
+                      </div>
+                    </div>
+                  </CarouselItem>
+
+                  {/* AI Booking System Product */}
+                  <CarouselItem>
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center p-4">
+                      <div>
+                        <Badge variant="outline" className="mb-2">
+                          AI-Powered
+                        </Badge>
+                        <h3 className="text-2xl font-bold mb-4">
+                          AI Booking System
+                        </h3>
+                        <p className="text-muted-foreground mb-6">
+                          Custom booking system with smart AI agents for medical clinics and businesses. 
+                          Seamlessly integrates with any website and automates appointment scheduling 
+                          with intelligent conversation handling.
+                        </p>
+                        <div className="flex items-center gap-4 mb-6">
+                          <div className="rounded-full bg-purple-100 w-10 h-10 flex items-center justify-center">
+                            <MessageCircle className="h-5 w-5 text-purple-700" />
+                          </div>
+                          <span>Smart AI conversation agents</span>
+                        </div>
+                        <div className="flex items-center gap-4 mb-6">
+                          <div className="rounded-full bg-purple-100 w-10 h-10 flex items-center justify-center">
+                            <Calendar className="h-5 w-5 text-purple-700" />
+                          </div>
+                          <span>Automated appointment scheduling</span>
+                        </div>
+                        <div className="flex items-center gap-4 mb-8">
+                          <div className="rounded-full bg-purple-100 w-10 h-10 flex items-center justify-center">
+                            <Code className="h-5 w-5 text-purple-700" />
+                          </div>
+                          <span>Easy website integration</span>
+                        </div>
+                        <div className="flex items-baseline gap-4 mb-8">
+                          <span className="text-3xl font-bold text-purple-700">
+                            ₪4,890
+                          </span>
+                          <span className="text-muted-foreground">One-time payment</span>
+                        </div>
+                        <div className="flex flex-col sm:flex-row gap-4">
+                          <Link href="/products/ai-booking-system">
+                            <Button className="bg-purple-700 hover:bg-purple-800">
+                              Learn More
+                            </Button>
+                          </Link>
+                          <Link href="/#contact">
+                            <Button variant="outline">Contact Sales</Button>
+                          </Link>
+                        </div>
+                      </div>
+                      <div className="relative h-[300px] md:h-[400px] rounded-lg overflow-hidden bg-gradient-to-br from-purple-100 to-purple-200 flex items-center justify-center">
+                        <div className="text-center">
+                          <div className="rounded-full bg-purple-700 w-20 h-20 flex items-center justify-center mx-auto mb-4">
+                            <MessageCircle className="h-10 w-10 text-white" />
+                          </div>
+                          <p className="text-purple-700 font-semibold">AI Booking Interface</p>
+                        </div>
+                      </div>
+                    </div>
+                  </CarouselItem>
+
+                  {/* Consulting Package Product */}
+                  <CarouselItem>
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center p-4">
+                      <div>
+                        <Badge variant="outline" className="mb-2">
+                          Expert Guidance
+                        </Badge>
+                        <h3 className="text-2xl font-bold mb-4">
+                          8-Hour Consulting Package
+                        </h3>
+                        <p className="text-muted-foreground mb-6">
+                          8 hours of expert consulting for technology strategy, system architecture, 
+                          and business optimization. Get personalized guidance from our experienced 
+                          team to solve complex challenges and accelerate your growth.
+                        </p>
+                        <div className="flex items-center gap-4 mb-6">
+                          <div className="rounded-full bg-purple-100 w-10 h-10 flex items-center justify-center">
+                            <Users className="h-5 w-5 text-purple-700" />
+                          </div>
+                          <span>Personalized expert guidance</span>
+                        </div>
+                        <div className="flex items-center gap-4 mb-6">
+                          <div className="rounded-full bg-purple-100 w-10 h-10 flex items-center justify-center">
+                            <Zap className="h-5 w-5 text-purple-700" />
+                          </div>
+                          <span>Technology strategy optimization</span>
+                        </div>
+                        <div className="flex items-center gap-4 mb-8">
+                          <div className="rounded-full bg-purple-100 w-10 h-10 flex items-center justify-center">
+                            <LayoutDashboard className="h-5 w-5 text-purple-700" />
+                          </div>
+                          <span>System architecture review</span>
+                        </div>
+                        <div className="flex items-baseline gap-4 mb-8">
+                          <span className="text-3xl font-bold text-purple-700">
+                            ₪2,990
+                          </span>
+                          <span className="text-muted-foreground">8 hours included</span>
+                        </div>
+                        <div className="flex flex-col sm:flex-row gap-4">
+                          <Link href="/products/consulting-package">
+                            <Button className="bg-purple-700 hover:bg-purple-800">
+                              Learn More
+                            </Button>
+                          </Link>
+                          <Link href="/#contact">
+                            <Button variant="outline">Schedule Consultation</Button>
+                          </Link>
+                        </div>
+                      </div>
+                      <div className="relative h-[300px] md:h-[400px] rounded-lg overflow-hidden bg-gradient-to-br from-purple-100 to-purple-200 flex items-center justify-center">
+                        <div className="text-center">
+                          <div className="rounded-full bg-purple-700 w-20 h-20 flex items-center justify-center mx-auto mb-4">
+                            <Users className="h-10 w-10 text-white" />
+                          </div>
+                          <p className="text-purple-700 font-semibold">Expert Consulting</p>
+                        </div>
+                      </div>
+                    </div>
+                  </CarouselItem>
+                </CarouselContent>
+                <CarouselPrevious />
+                <CarouselNext />
+              </Carousel>
+            </div>
+          </div>
 
           <div className="mt-12 text-center">
             <Link href="/products">
