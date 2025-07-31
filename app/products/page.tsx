@@ -53,10 +53,33 @@ export default function ProductsPage() {
             </CardContent>
           </Card>
 
-          {/* Placeholder for future products */}
-          <Card className="border-dashed border-2 border-gray-200 bg-gray-50">
-            <CardContent className="p-6 flex flex-col items-center justify-center h-full text-gray-400">
-              <p className="text-center">More products coming soon</p>
+          <Card className="border-purple-100 hover:shadow-lg transition-shadow">
+            <CardContent className="p-6">
+              <div className="rounded-full bg-purple-100 w-12 h-12 flex items-center justify-center mb-4">
+                <CreditCard className="h-6 w-6 text-purple-700" />
+              </div>
+              <h3 className="text-xl font-semibold mb-2">
+                AI Booking System
+              </h3>
+              <p className="text-muted-foreground mb-4">
+                Custom booking system with smart AI agents for medical clinics and businesses. Seamlessly integrates with any website.
+              </p>
+              <div className="flex justify-between items-center mb-4">
+                <span className="text-lg font-bold text-purple-700">
+                  ₪4,890
+                </span>
+                <Badge variant="outline" className="text-xs">
+                  AI-Powered
+                </Badge>
+              </div>
+              <Link href="/products/ai-booking-system">
+                <Button
+                  variant="default"
+                  className="w-full bg-purple-700 hover:bg-purple-800"
+                >
+                  Learn More
+                </Button>
+              </Link>
             </CardContent>
           </Card>
 
