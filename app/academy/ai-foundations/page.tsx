@@ -83,7 +83,7 @@ export default function AIFoundationsPage() {
               <CardContent className="p-6">
                 <div className="text-center mb-6">
                   <h3 className="text-2xl font-bold mb-2">AI Development Foundations</h3>
-                  <div className="text-3xl font-bold text-purple-700 mb-2">Contact for Pricing</div>
+                  <div className="text-3xl font-bold text-purple-700 mb-2">₪3,990</div>
                   <Badge variant="outline" className="mb-4">Beginner Friendly</Badge>
                 </div>
                 

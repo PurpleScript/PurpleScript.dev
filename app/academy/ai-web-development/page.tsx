@@ -83,7 +83,7 @@ export default function AIWebDevelopmentPage() {
               <CardContent className="p-6">
                 <div className="text-center mb-6">
                   <h3 className="text-2xl font-bold mb-2">AI Web Development</h3>
-                  <div className="text-3xl font-bold text-blue-700 mb-2">Starting Soon</div>
+                  <div className="text-3xl font-bold text-blue-700 mb-2">₪3,990</div>
                   <Badge variant="outline" className="mb-4 bg-blue-50 text-blue-700">Intermediate Level</Badge>
                 </div>
                 

@@ -83,7 +83,7 @@ export default function AIBusinessSolutionsPage() {
               <CardContent className="p-6">
                 <div className="text-center mb-6">
                   <h3 className="text-2xl font-bold mb-2">AI Business Solutions</h3>
-                  <div className="text-3xl font-bold text-orange-700 mb-2">Coming Soon</div>
+                  <div className="text-3xl font-bold text-orange-700 mb-2">₪3,990</div>
                   <Badge variant="outline" className="mb-4 bg-orange-50 text-orange-700">Advanced Level</Badge>
                 </div>
                 
